@@ -1,0 +1,427 @@
+Personal: https://trello.com/b/y4DlglWL/personal
+Hackerlist: https://trello.com/b/B50vAX5E/team-goals
+
+* Ignorance
+Or documenting and rectifying my ignorance, as best I can:
+** Category Theory
+** Abstract Algebra
+** middle-square method
+(introduced by Knuth, Art of Computer Programming v.2, p.4)
+
+** matrix representations
+
+* Learnings
+
+* Axioms
+
+I need to get my life in order.
+I need to understand what I want.
+I need to document my learnings.
+I need to justify my decisions to myself.
+I need to support the people who are meaningful to me.
+I need to support people who can create a better world.
+I need to collect my thoughts.
+
+* Reading List
+** The Art of War
+http://suntzusaid.com/
+
+* Principles
+
+** Justify
+Every time I read a link (or at least for some class / category of resource) I should need to write a sentence as to why I am visiting the link, what it accomplishes. This friction is necessary
+
+** On keeping a clean space
+** On owning a lot of things
+
+* Poetry
+
+** Bark
+
+So sad, this rotted slab of wood, before my hand how high you stood.
+How delightful, the cedar sawdust smell, just before the timber fell.
+
+I must ignore your final boon, to be displayed in an well lit room.
+Your imperfections, but they will be sorted soon.
+
+The feel of finely sanded grains, my fingers travel each of your years in seconds.
+How many rings have your years carefully crafted? They will be painted soon.
+
+Paint fades. It is again painted, freshly manicured, brushed with
+care. Each stroke filled with intent, love. Love for paint, for that
+is what we put on display.
+
+Do not fret, my cedar tree. There also paint on me.
+That we may see things as they are. As they are meant to be?
+
+Paint fades. It is not noticed.
+
+Paint fades. It is again painted. It is suffocating, poisonous.
+
+* Links / Resources
+1. Business Steps for starting a startup
+http://www.orrick.com/Practices/Emerging-Companies/Startup-Forms/Pages/Forms-Founders.aspx
+- 83(b)
+
+2. Python
+- package structure
+- python performance / debugging
+- scipy and numpy
+
+3. Text editting with emacs
+
+4. Writing a summarizer (nltk)
+
+5. Realtime notification systems (redis)
+http://degizmo.com/2010/03/22/getting-started-redis-and-python/
+https://github.com/leporo/tornado-redis (tornado + redis)
+http://stackoverflow.com/questions/5953786/how-do-you-properly-query-redis-from-tornado/15596969#15596969
+http://stackoverflow.com/questions/6848276/push-messages-to-clients-in-python
+
+6. Installing Go
+http://golang.org/doc/install#download
+http://golang.org/doc/install/source
+http://golang.org/doc/code.html
+
+7. World modelling (stats + ml)
+http://natureofcode.com/book/introduction/
+
+8. Economics and Price Perception
+[UNREAD] http://harvardmagazine.com/2006/03/the-marketplace-of-perce.html
+[IMPORTANT FIGURE] http://en.wikipedia.org/wiki/Dan_Ariely
+
+9. Clojure
+https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md
+http://clojure-doc.org/
+
+10. Machine Learning
+[UNREAD] http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial
+[DATASET] https://www.kaggle.com/c/facebook-recruiting-iii-keyword-extraction/data
+
+11. Javascript resources
+http://yeoman.io/
+* Rules
+1. Track how much time task took + delta of prediction
+2. Calculate best # of tasks / hours per day (in terms of achievability)
+
+* Goals
+** 5 Year Goals
+*** Programming Languages
+1. Learn Haskell
+2. Learn Clojure
+*** read sheet music for piano + guitar
+*** Learn languages
+- [ ] Learn conversational Chinese (Mandarin)
+- [ ] Learn conversational Spanish
+- [ ] Learn conversational French
+
+*** Create a usb device + write device driver/module (C + EE)
+1. [ ] Read K&R C Programming Language
+2. [ ] The Unix Programming Environment
+3. [ ] Become better at bash
+
+*** Mathematics
+1. Linear Algebra
+2. Difeq
+3. Calculus
+
+*** Algorithms
+https://class.coursera.org/algs4partI-003/lecture/index
+*** Learn python better
+1. [ ] Port web.py to python3
+2. [ ] Learn scipy + numpy
+3. [ ] Debugging
+*** Statistics - Housing in SF
+1. [ ] Learn Statistics
+
+*** Complete Andrew Ng's Machine Learning Course w/ passing grade
+1. [ ] Machine Learning
+
+*** Create a smart email client w/ summarization (Math)
+1. [ ] Create a summarizer in NLP (read some ntlk book)
+
+** TODO August 2013-08 
+*** TODO Week 1 
+1. [X] EE - 3 hours of Electrical Engineering
+2. [X] STATS - 4 hours of Statistics (1 ch. per week + problems)
+3. [X] UNIX - 1 hour of Unix (up to ch. 1.2)
+4. [X] LANG - 2 hours of Spanish/French per week
+**** TODO 2013-08-17 Saturday, August 17, 2013
+***** Trello
+1. [X] Set Personal trello
+2. [X] Set Hackerlist trello
+***** Learn 
+1. [X] Electrical engineering 1 hour
+**** 2013-08-18 Sunday, August 18, 2013
+***** Trello
+1. [X] Set Personal trello
+2. [X] Set Hackerlist trello
+***** Learn
+1. [X] French (duolingo) 1 hour
+2. [X] Read Ch. 1 of Think Stats: Probability and Statistics for Programmers 
+goal: read chapter 1, 3pm coffee @ fourbarrel + statistics
+cmd: evince ~/4-Library/thinkstats.pdf -p 13 # to 21
+4. [X] Read Ch. 1 of The Unix Programming Environment
+*** TODO Week 2
+1. [ ] STATS - Read Ch.2 Statistics + problems
+2. [ ] UNIX - Read Ch.2 Unix + problems
+3. [ ] LANG - 2 hours of Spanish/French per week
+4. [ ] C - Read Ch.1 + problems
+**** 2013-08-19 Monday, August 19, 2013
+***** Trello
+1. [ ] Set Personal trello
+2. [ ] Set Hackerlist trello
+
+* Ideas
+clustering on employment to discover which markets are underserved
+
+* Life Lessons
+** Organize your life as early as possible
+
+*** Things I organize
+1. My file system
+2. My daily, weekly, montly, and yearly goals
+3. My thoughts -- via commonbooks
+4. Reading lists
+
+** Research people before meetings
+Find out who they know (know who you want to be introduced to)
+
+** Marginal Gains and Compound Interest
+
+http://jamesclear.com/marginal-gains
+
+** Etc
+2. All things come to an end. Some people have trouble allowing
+   themselves to enjoy things because they think about / can imagine
+   them ending. Take anime for example. If you're on episode 26 out of
+   30, it's hard to enjoy it fully knowing it soon will end. It is a
+   protective mechanism to prevent us from getting too hurt, becoming
+   blinded, falling into a trap.
+3. We must face our fears
+4. We must get the important things out of the way so we don't have to
+   worry about them later, let them pile up, or more importantly so
+   you don't forget. Spacial and temporal locality.
+
+* GCC
+** Mtg w/ Drew
+All watched over by machines of love and grace - Richard Brautigan (poem; Machines of Love and Grace)
+
+*** Seeking 1% Self-Improvements:
+One should spend their first 20 years learning about their lifestyles (or perhaps a computer should do this and learn your objectives based on your actions).
+- How long should I sleep?
+- When do I work best?
+- Where are my biggest distractions? Where am I genuinely wasting time?
+- How do I procrastinate better; more productively or efficiently?
+- Which relationship are helping me live most healthfully? 
+
+*** Curating and Maintaining Community
+(the world needs to specify functions and definitions for this general concept)
+- How much effort is needed by experts to maintain quality per user added to the network (this is likely not be linear)
+ -- This is different than per contributor added (noam)
+
+*** Web of Trust
+(the world needs to specify functions and definitions for this general concept)
+It's an optimization problem between:
+who to let in your network and
+what type of content you want.
+Consideration: You don't want to miss out on good content but you also want to right content.
+
+Prerequisite: Requires people must first determine their goals.
+
+*** Automating Knowledge Recommendations
+A recommender system which recommends content based on the entirety of your knowledge: optimizes for greatest entropy / opportunity to learn / fill gaps and fulfillment. It should also be forward looking and consider future knowledge (planning). This requires some degree of infrastructure and informed taxonomy / ontological organization.
+
+*** On Improving Notification Systems
+Planning for an event is not enough, it needs priorty levels + feedback
+
+Calendars + push notifications lack priority / frequency ()
+There is an 83% chance you will miss this meeting
+Feedback loops
+
+*** Idiot - Archive + Entity Resolve every idea
+See whose interested in a problem / solution.
+See how closely ideas overlap in requirements or impact 
+Compare effectiveness of solutions
+
+*** To Read
+- continuity of parks
+
+* How do I think?
+
+** Should others think differently?
+It's wonderful there's such diversity within peoples' thoughts and
+life philosophies. Some living for today, for nobel causes in 3rd
+world countries, to get rich, to find love. It's reassuring in the
+same way a breadth first search offers completeness, in the same way
+random restart and simulated annealing helps avoid becoming infintely
+trapt within local optimas. I would not stake humanities success on
+the correctness of my ideals. Perhaps I should think differently and I
+look forward to shaping my direction as new information becomes
+available and circumstances emerge.
+
+** As a single thread, even when weaved between others
+That doesn't mean it isn't lonely, feeling like a single thread
+weaving an path through a tapestry whose composition we don't fully
+understand and cannot fully observe. I want to understand this
+composition. I want others to want to understand this composition, why
+it is we wave, and what opportunities exist for us all to weave
+better. Irrespective of our different goals, mutual understanding is
+imperative to us making informed decisions. Knowledge should never be
+held hostage or become collateral damage, unless to protect knowledge
+as a whole (a most saddening exception, one of the most sad things
+there is).
+
+Who's to say one's strategy for weaving is universally superior to
+another? I suppose one can painstakingly calculate the costs of having
+to repair said weaves, or the value that a "correct" weave actually
+offers, for and to whom. One may even speak of opportunity costs, of
+risks, and on the cost of not risking enough. One can even debate what
+value is, how it is measured, and for that matter, what a "correct"
+weave actually means.
+
+And people try. Economists, statisticians, computer scientists,
+mathematicians, classical scientists, game theoreticians. But this
+struggle is constantly undermined by the pressures of being human. The
+pressure of conforming to society, achieving personal happiness, and
+marketing/promoting one's ideas in order to inflate their importance
+and have them adopted to a degree one believes accurately reflects
+their merits.
+
+I feel like there should be a better way; a better global effort
+towards an internally consistent and accessible world. This is the
+world I strive to see realized, though I know it is not to be achieved
+in my lifetime.
+
+** On choosing a philosophy
+Choosing a life philosophy is challenging, especially without first
+setting a context. For many, I would guess their context is around 150
+years; approaching the upper bound of one's life and their usefullness
+as pertaining to their children and grand children.
+
+The window I live in is three thousand years. Arbitrary perhaps. It is
+the duration of time the past feels relevant to my life today. I look
+at the past three thousand years and I am distraught, how much
+information has been lost? How many great minds have returned to the
+earth without their learnings to survive them? This summed lost impact
+is surely greater than my own, should it even survive.
+
+And of the learnings of others which have survived, how have people's
+lives improved because of them? And, I'd be remiss if I did not also
+consider, in which ways have they become worse? On this I am not
+prepared to answer.
+
+** Sacrifice; The consequences of my decision
+Having a contextual window of 3 millennia has consequences. It means
+that my actions do not optimize for the those living around me. Their
+window only practically represents 1/20th of mine.
+
+I necessarily have to invest in other people. My mission is not one
+that can be accomplished individually. I thus constantly feel I can only
+afford to keep company with those who will push me on my service
+towards these goals.
+
+- I become anxious about not using my resources efficiently
+- I have started to become increasingly upset by trivia and experience
+  even greater disdain when I take pleasure in it.
+- I have sold most of my possessions to eliminate distractions
+- I try not to purchase expensive things unless there is a practice
+  reason and the delta in price is justifiable
+- I am willing to spend money on others
+- I have automated much of my life (laundry, groceries, rent) so I can
+  spend as much time as possible focusing on problems I feel are more
+  important.
+
+** Fear of missing out
+Our number of seconds in this world are perpetually diminishing. Every
+moment we deviate from our objective is a moment we lose forever. It's
+painful knowing we need to rest and take breaks. At the same time,
+this reality comes with opportunities for optimization. Effective
+procrastination is thus a topic of personal interest.
+
+It's also upsetting knowing there are only a certain number of forks
+we can make and still be on track to hit our goals. Only so many
+things we can be mutually good at.
+
+I often wonder if my limited travelings, cultural exposures,
+relationships, meditations, are actually inhibiting my success. It's
+likely that learnings fundamental to my success lie in one of the
+experiences I have not yet had.
+
+I am only human. I frequently fight the urge to change my
+path. Sometimes I wish to dissapear in a different country and lose
+contact with anyone important to me. Sometimes I consider prioritizing
+happiness.
+
+*** Growth versus execution
+Balancing growth and execution is one of my biggest presonal
+challenges. Recently I've felt pressure to prioritize execution over
+learning and I have great fear this strategy will work against me (in
+terms of the absence of compound interest of my knowledge) in the
+future.
+
+** A leap of faith
+I believe that (1) striving to create a universal knowledge base, (2)
+working towards discovering and eliminating inconsistencies, and (3)
+making this knowledge base accessible, are the root of progress and
+advancement.
+
+* Reading List
+
+** continuity of parks
+
+* Business Ideas
+** Baybo
+** Sendr
+** Hackerlist
+** LifeSupport
+** Thebestbookon.com
+
+bests book on topics, endorsed and verified by leading experts
+
+*** Problems
+1. If you're not an expert in X, how do you find the best book on X?
+2. There are too many books to read, you can't read them all
+3. People want to know the fastest way to learn
+
+*** Solutions / Competitors
+http://whatshouldireadnext.com/
+
+*** More Problems
+
+*** Verticals (+ justification)
+**** High School
+**** Languages
+***** Chinese
+***** German
+**** Graduate Topics
+
+**** Best Translations
+*** How
+- only phds/experts can comment
+- Technical books via irc
+
+*** Milestones
+**** M1. MVP, Search/Discovery Engine
+***** Domains
+***** Monetization
+1. Affiliate Links (amazon)
+
+**** M2. Marketplace
+***** Monetization
+Marketplace on thebestbookon.com
+
+**** M3. Syllabuses
+***** How to learn x (sequence of books)
+The best sequence / syllabus on X
+- mashups of content
+- sell sylabi?
+
+**** M4. Annotations
+
+*** Virality
+- Promote Bloggers, split affiliate fee
+- Login with facebook, send books to friends (learn who likes what)
+- Every purchase can be sent to 2 friends for free
+-- every additional friend is 25% off, you earn 25%
+

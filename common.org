@@ -1,197 +1,1602 @@
-Personal: https://trello.com/b/y4DlglWL/personal
-Hackerlist: https://trello.com/b/B50vAX5E/team-goals
-
-* Ignorance
+* Axioms
+Be principled:
+** Be Humble, Honest, Scholastic
+*** Ignorance
 Or documenting and rectifying my ignorance, as best I can:
-** Category Theory
-** Abstract Algebra
-** middle-square method
+**** Category Theory
+**** Abstract Algebra
+**** middle-square method
 (introduced by Knuth, Art of Computer Programming v.2, p.4)
 
-** matrix representations
+**** matrix representations
 
-* Learnings
+**** Semiotics
+**** Ontogenesis
 
-* Axioms
+**** What is the electric field?
+***** Why? 
+Because it was mentioned by Richard Feynman (https://www.youtube.com/watch?v=FjHJ7FmV0M4) as he 
+described how light exists and propogates (asserting that they are not flowing vectors
+*** My flaws
+*** Fool me once
+**** SQLAlchemy UnicodeDecodeError
+Hopefully I save a fellow pythonista a few minutes of debugging --
 
-I need to get my life in order.
-I need to understand what I want.
-I need to document my learnings.
-I need to justify my decisions to myself.
-I need to support the people who are meaningful to me.
-I need to support people who can create a better world.
-I need to collect my thoughts.
+Problem: SQLAlchemy is responding with UnicodeDecodeError, "UnicodeEncodeError: 'ascii' codec can't encode character u'\u????' in position ?: ordinal not in range(128)" for Postgres
 
-* Reading List
-** The Art of War
-http://suntzusaid.com/
+Troubleshooting Questions:
+- SQLAlchemy: Are you using importing sqlalchemy.String or Unicode?
+- SQLAlchemy: Is you client / connect string set to expect utf-8?
+- Postgres: What type of encoding are your tables using?
 
-* Principles
+Solution(s):
+a) from sqlachemy import Unicode (instead of String)
+b) update your sqlalchemy.create_engine initializer to include a client_encoding='utf8' kwarg (or add ?client_encoding=utf-8 directly to your connection string) 
+c) make sure your table has the correct encoding
+d) if it doesn't, avoid future conflict: Make sure your postgresql template0/1 are using UTF-8 and not SQL_ASCII. To fix this, see: https://gist.github.com/ffmike/877447
+**** linux kvm windows insufficient space
+search: 
+kvm windows out of hard drive space
 
-** Justify
-Every time I read a link (or at least for some class / category of resource) I should need to write a sentence as to why I am visiting the link, what it accomplishes. This friction is necessary
+1. How to resize your kvm virtual disk | KVM - The Linux Kernel-Based ...
+www.linux-kvm.com/content/how-resize-your-kvm-virtual-disk
 
-** On keeping a clean space
-** On owning a lot of things
+** Be Intospective, Objective, Quantified, Data Driven
+I need to justify my decisions to myself:
+https://docs.google.com/spreadsheets/d/1k-zl-Ya4OAU7Lp8DsPGy7mSJVCeXSPqK673Wiq8ndt8/edit#gid=0
+*** Life Goals
+**** 5 Year Goals
+***** Epistemology
+****** The optimal representations of paths through knowledge
+(knowledge base) how do you represent all your existing knowledge /
+starting state, keep track of what you know
+- expose your knowledge base / graph + state of knowledge via API
+- obtain universal graph of knowledge gaps, inconsistencies
+***** Programming Languages
+1. Learn Haskell
+2. Learn Clojure
+***** read sheet music for piano + guitar
+***** Learn languages
+- [ ] Learn conversational Chinese (Mandarin)
+- [ ] Learn conversational Spanish
 
-* Poetry
+***** Create a usb device + write device driver/module (C + EE)
+1. [ ] Read K&R C Programming Language
+2. [ ] The Unix Programming Environment
+3. [ ] Become better at bash
 
-** Bark
+***** Mathematics
+1. Linear Algebra
+2. Difeq
+3. Calculus
 
-So sad, this rotted slab of wood, before my hand how high you stood.
-How delightful, the cedar sawdust smell, just before the timber fell.
+***** Algorithms
+https://class.coursera.org/algs4partI-003/lecture/index
+***** Learn python better
+1. [ ] Port web.py to python3
+2. [ ] Learn scipy + numpy
+3. [ ] Debugging
+***** Statistics - Housing in SF
+1. [ ] Learn Statistics
 
-I must ignore your final boon, to be displayed in an well lit room.
-Your imperfections, but they will be sorted soon.
+***** Complete Andrew Ng's Machine Learning Course w/ passing grade
+1. [ ] Machine Learning
 
-The feel of finely sanded grains, my fingers travel each of your years in seconds.
-How many rings have your years carefully crafted? They will be painted soon.
+***** Create a smart email client w/ summarization (Math)
+1. [ ] Create a summarizer in NLP (read some ntlk book)
 
-Paint fades. It is again painted, freshly manicured, brushed with
-care. Each stroke filled with intent, love. Love for paint, for that
-is what we put on display.
-
-Do not fret, my cedar tree. There also paint on me.
-That we may see things as they are. As they are meant to be?
-
-Paint fades. It is not noticed.
-
-Paint fades. It is again painted. It is suffocating, poisonous.
-
-* Links / Resources
-1. Business Steps for starting a startup
-http://www.orrick.com/Practices/Emerging-Companies/Startup-Forms/Pages/Forms-Founders.aspx
-- 83(b)
-
-2. Python
-- package structure
-- python performance / debugging
-- scipy and numpy
-
-3. Text editting with emacs
-
-4. Writing a summarizer (nltk)
-
-5. Realtime notification systems (redis)
-http://degizmo.com/2010/03/22/getting-started-redis-and-python/
-https://github.com/leporo/tornado-redis (tornado + redis)
-http://stackoverflow.com/questions/5953786/how-do-you-properly-query-redis-from-tornado/15596969#15596969
-http://stackoverflow.com/questions/6848276/push-messages-to-clients-in-python
-
-6. Installing Go
-http://golang.org/doc/install#download
-http://golang.org/doc/install/source
-http://golang.org/doc/code.html
-
-7. World modelling (stats + ml)
-http://natureofcode.com/book/introduction/
-
-8. Economics and Price Perception
-[UNREAD] http://harvardmagazine.com/2006/03/the-marketplace-of-perce.html
-[IMPORTANT FIGURE] http://en.wikipedia.org/wiki/Dan_Ariely
-
-9. Clojure
+*** Topical Goals
+1. Writing summarizer using nltk
+2. Learning scipy & numpy
+3. Neural network in clojure
+http://www.fatvat.co.uk/2009/06/back-propagation-algorithm-in-clojure.html
+http://gigasquidsoftware.com/blog/2013/12/02/neural-networks-in-clojure-with-core-dot-matrix/
 https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md
 http://clojure-doc.org/
+4. World modelling (stats + ml)
+http://natureofcode.com/book/introduction/
+5. Build personal movie recsys
+
+*** Reading List
+**** Anthony DiFranco
+Why Nudge?: The Politics of Libertarian Paternalism (The Storrs Lectures Series)
+http://www.amazon.com/Why-Nudge-Politics-Libertarian-Paternalism/dp/0300197861
+**** Erik Rigtorp
+http://www.bwater.com/Uploads/FileManager/Principles/Bridgewater-Associates-Ray-Dalio-Principles.pdf
+
+**** Artem Boytsov
+Summa Technologiae
+
+**** Zephyr Pellerin
+**** Naoimi Most
+**** Nick Owens (2014-08-29)
+***** Unix System Programming
+http://www.amazon.com/Unix-System-Programming-Keith-Haviland/dp/0201877589/ref=sr_1_fkmr0_1?s=books&ie=UTF8&qid=1409358164&sr=1-1-fkmr0&keywords=unix+system+keith+havalam
+***** Simulacra and Simulation
+https://en.wikipedia.org/wiki/Simulacra_and_Simulation
+http://www.amazon.com/Simulacra-Simulation-The-Body-Theory/dp/0472065211/ref=sr_1_1?ie=UTF8&qid=1409358216&sr=8-1&keywords=Simulacra+and+Simulation
+***** Human Action: The Scholar's Edition
+http://www.amazon.com/Human-Action-The-Scholars-Edition/dp/1610161459/ref=sr_1_1?ie=UTF8&qid=1409358231&sr=8-1&keywords=human+action
+1. How in depth people think about economics
+
+**** Mek (2014-08-29)
+***** The Art of War
+***** Artificial Intelligence, a Modern Approach
+***** How to Win Friends & Influence People
+***** 22 Immutable Laws Of Marketing
+1. Very short; high return for time investment
+2. Great empirical case studies
+***** Dokkōdō
+https://en.wikipedia.org/wiki/Dokk%C5%8Dd%C5%8D
+**** Stephen Balaban (2014-08-29)
+***** The C Programming Language, The Unix Programming Environment (TuP)
+***** The Art of Computer Programming TAoCP, SICP
+***** The Introduction to Function Programming through Lambda Calculus
+***** OnLisp > Land of Lisp
+***** Dummit and Foote Abstract Algebra
+***** Meditations, Marcus Aerelius
+1. One person's perspective on how to live a good life
+2. How you spend your time, determining your purpose
+***** Ender's Game
+
+***** 1st paper on Denoising Autoencrypters Benjio 
+http://jmlr.org/papers/volume11/vincent10a/vincent10a.pdf
+
+**** Drew Winget (2014-08-29)
+Creative commons
+
+1. Represent patterns that are recapitulated in daily life, assumptions around which the world is organized
+2. These are good examples of works written by people who cared and were genuinely trying to figure things out.
+3. A lens into (trying to understand) your own opinions and thoughts
+4. Organize a field of questioning in terms of daily experience which is universal across time.
+***** Diophantus
+Arithmetica
+***** Confucius
+
+***** The Republic (Plato)
+https://en.wikipedia.org/wiki/The_Republic_(Plato)
+Freedom, control, and purpose in society
+1.
+2.
+3.
+
+***** Phaedrus
+How to behave ethically and control/balance one's passions in life?
+1. 
+2. 
+3. 
+
+***** The Theaetetus
+What is knowledge?
+1. Attempts to separate the field of epistemology into recovering knowledge or creation
+constructivism v. intuitionism
+2.
+3.
+
+***** Montaigne's Essays (Michel de Montaigne)
+Drew's 1st pick, read in french
+https://en.wikipedia.org/wiki/Essays_(Montaigne)
+1. Quotes nearly every book
+2. A lot of perspective, covers many topics
+3. On education
+4. Invented the term/genre essay to describe a piece of writing
+essay -- (exigere: to weigh, essayer: to try)
+ex·e·ge·sis -- (critical explanation or interpretation of a text, especially of scripture)
+
+***** Euclid's Elements
+Drew's 2nd pick
+1. Biggest prerequisite mathematical book prior to 1900's 
+2. One of Brewster Khale's favourite books, 
+
+****** 1st book of apollonius's conics
+1. 
+2.
+3.
+
+******* Decartes Geometry
+Directly addresses apollonius
+
+1. discourse on method -- how to think, do science, properly
+2. the geometry -- solving open problems
+3. optics and meteorology
+
+******* Newton's Principia Mathematica (1686)
+- Rudolf Carnap's translation is the best
+- read first two pages of each section
+- the three laws of proper inference
+http://archive.org/stream/newtonspmathema00newtrich#page/n0/mode/2up
+
+******* Galileo's Discourse on two new sciences
+
+***** Aristotle's Physics
+Drew's 4rd pick
+1. Joe Sachs translation -- preserves etymology and context of words Aristotle invents
+2. Formalizing the way we experience time, motion, change, casuality, and chance. Named it phusei (natural, by nature)
+3. Attempts to give definitions for time, motion, causality, and chance.
+
+***** Schopenhauer
+(Optional intro to Kant)
+****** Critique of Pure Reason (Immanuel Kant)
+Drew's 3rd pick
+repeats himself, seems unedited
+https://en.wikipedia.org/wiki/Critique_of_Pure_Reason
+How reason fits into preconceived notions, senses, etc., and as a result, what limits of reason and 
+Summarising 2000 years of thinking about how one can know things. Create a vocabulary 
+1.
+2.
+3.
+
+***** Decartes: Rules For The Direction Of The Mind
+
+***** Great Books of the Western World
+****** Marx
+****** phenomenology of spirit
+Georg Wilhelm Friedrich Hegel -- quintissential german philosophy
+
+***** Mcconnell And Brue Economics 17th Edition
+
+The optimal representation of paths through knowledge
+
+***** Aristotle's Rhetoric
+**** Ross Colby
+***** Periodic Table
+Basic building blocks for life
+Defines our reality
+***** Book recommendation for Tesla Give Henry Ford
+***** The Physical Properties of Radiation
+- Green cloth textbook from 50s, monograph (supposedly at stanford)
+**** Nick Frugale
+live and grow rich
+** Be a Participant
+*** GCC Great Conversation Congress
+**** Epistemology
+***** 2014-04-25 Fri (Drew, Mek, Andrew)
+
+Re: Structure of Scientific Revolutions & Against Method & Logic of Scientific Discovery
+
+Defining a different level of granularity
+
+Newness: Change in the size or location of the boundaries of
+reality. E.g. (paradigm shifts), the discovery of a piece of
+knowledge which alters the internal consistency, or the boundaries, of
+our observable world/discourse/reality (e.g. galileo).
+refuting integrity
+
+Novelty (normal science): Change in the density/granularity (# inner
+circles, and inductively their sizes -- therefore novelty requires
+newness?) or granularity (addition/removal of new consistent
+circles). The introduction of an association or classification which
+enhances our definition or understanding of an existing reality
+(e.g. filling in knowledge).  E.g. A more effective model/approach,
+which further supports the internal consistency of our relativity /
+existing world
+
+Any statement, by definition is a combination of newness and novelty,
+even if these values are zero or negative. This is because each
+universe of discourse is composed of subsets which are themselves
+isolatable universes of discourse. The definition of newness and
+novelty thus may have the potential to change depending on the context
+/ scope / selection of the universe.
+
+Parcellation: Or the re-partitioning/classification of a universe
+(from the context/pespective of this parcellated universe) is thus
+new, in that its size and location have changed, and novel, in that
+their densities/granularity have too changed.
+
+a subset of a previously understood reality is the change of either
+size, location, ... of a smaller universe of discourse.
+
+Human perspective: People prefer novelty over newness because we want to be able to focus
+on problems without having the rug pulled from under our feet and
+having to restart (unless we can guarantee that we will be restarting
+something which allows us to reach greater heights in less time)
+
+--
+
+Mek:
+
+All knowledge can be represented as a presumably infinite graph (needs
+support/proof). Some of this graph is "known" (observable, and in some
+cases infinitely calculatively/verifiably so; the result dividing by
+2), some of it is unknown (unobservable). An alternate presentation of
+Münchhausen's trilemma yields:
+
+circular argument - a branch of logic in the graph is a cycle.
+regressive argument - or rather recurrent argument (mathematical induction), a branch may be recursively expanded via a formula until either a base-case (ax
+axiomatic argument - a base-case reached via a recurrent argument which carries the accumulative uncertainty inherent of all its parent arguments
+
+"entscheidungsproblem" -> "Gödel's incompleteness theorems"
+
+****** Terms
+******* Epistemology - Definitions and Limitations of Knowledge
+******** inventor
+Scottish philosopher James Frederick Ferrier (1808–1864) (Encyclopaedia Britannica Online, 2007)
+******** etymology
+from Greek ἐπιστήμη, epistēmē, meaning "knowledge, understanding", and λόγος, logos, meaning "study of")
+
+
+
+****** The Unmoved Mover - That which moves others but is not itself moved
+The "unmoved mover" moves other things, but is not itself moved by any prior action. In Book 12 (Greek "Λ") of his Metaphysics, Aristotle describes the unmoved mover as being perfectly beautiful, indivisible, and contemplating only the perfect contemplation: itself. He equates this concept also with the Active Intellect
+
+****** Trilemma (https://en.wikipedia.org/wiki/M%C3%BCnchhausen_trilemma)
+
+If we ask of any knowledge: "How do I know that it's true?", we may provide proof; yet that same question can be asked of the proof, and any subsequent proof. 
+
+The Münchhausen trilemma is that we have only three options when providing proof in this situation:
+
+The circular argument, in which theory and proof support each other (i.e. we repeat ourselves at some point)
+The regressive argument, in which each proof requires a further proof, ad infinitum (i.e. we just keep giving proofs, presumably forever)
+The axiomatic argument, which rests on accepted precepts (i.e. we reach some bedrock assumption or certainty)
+
+
+The following tropes for Greek skepticism are given by Sextus Empiricus, in his Outlines of Pyrrhonism. According to Sextus, they are attributed only "to the more recent skeptics" and it is by Diogenes Laertius that we attribute them to Agrippa.[1] The tropes are:
+
+Dissent – The uncertainty of the rules of common life, and of the opinions of philosophers.
+Progress ad infinitum – All proof requires some further proof, and so on to infinity.
+Relation – All things are changed as their relations become changed, or, as we look upon them from different points of view.
+Assumption – The truth asserted is merely a hypothesis.
+Circularity – The truth asserted involves a vicious circle (see regress argument, known in scholasticism as diallelus)
+
+**** Mtg w/ Drew
+All watched over by machines of love and grace - Richard Brautigan (poem; Machines of Love and Grace)
+***** Seeking 1% Self-Improvements:
+One should spend their first 20 years learning about their lifestyles (or perhaps a computer should do this and learn your objectives based on your actions).
+- How long should I sleep?
+- When do I work best?
+- Where are my biggest distractions? Where am I genuinely wasting time?
+- How do I procrastinate better; more productively or efficiently?
+- Which relationship are helping me live most healthfully? 
+
+***** Curating and Maintaining Community
+(the world needs to specify functions and definitions for this general concept)
+- How much effort is needed by experts to maintain quality per user added to the network (this is likely not be linear)
+ -- This is different than per contributor added (noam)
+
+***** Web of Trust
+(the world needs to specify functions and definitions for this general concept)
+It's an optimization problem between:
+who to let in your network and
+what type of content you want.
+Consideration: You don't want to miss out on good content but you also want to right content.
+
+Prerequisite: Requires people must first determine their goals.
+
+***** Automating Knowledge Recommendations
+A recommender system which recommends content based on the entirety of your knowledge: optimizes for greatest entropy / opportunity to learn / fill gaps and fulfillment. It should also be forward looking and consider future knowledge (planning). This requires some degree of infrastructure and informed taxonomy / ontological organization.
+
+***** On Improving Notification Systems
+Planning for an event is not enough, it needs priorty levels + feedback
+
+Calendars + push notifications lack priority / frequency ()
+There is an 83% chance you will miss this meeting
+Feedback loops
+
+***** Idiot - Archive + Entity Resolve every idea
+See whose interested in a problem / solution.
+See how closely ideas overlap in requirements or impact 
+Compare effectiveness of solutions
+
+***** To Read
+- continuity of parks
+  
+*** Response Essays
+**** Akhil Aryan: Maximizing Experience
+A Response to Akhil Aryan on Facebook
+'My objective in life is to maximize the number of unique experiences that I can experience.
+I'd like to "actually know" what everything "actually" feels like.'
+https://www.facebook.com/doublea9000/posts/10152379108912307
+
+Nor did I get the impression your objective was to achieve understanding or mastery -- these are separate objectives from acquiring diverse, meaningful experiences (albeit unavoidable, natural consequences thereof). 
+
+First, let's re-align on the points we are discussing. Your original post mentions "maximize[ing] the number of unique experiences" you have, which is a quantitative statement. In your followup, you also mention consciousness which is a qualitative property. In the realm of experientiality, I refer to quality as perceivable utility (how good the experience is to you either objectively or subjectively), as well as your physical capacity to utilize it; awareness (consciousness, appreciation).
+
+Thesis:
+On an ideological level, let me begin by saying I support your general thesis that encountering more experiences has the potential to be better and statistically more impactful than sitting in house all day. I think your's is a great paradigm and rule of thumb by which to live. What I will proceed to propose is a framework for ensuring you achieve this (as close as possible to) optimally, based on your definitions of optimality. 
+
+Limitations:
+The reality is, even if you are out "collecting" experiences 24/7, there are physical bandwidth limitations and constraints to what you can experience. For example, it's likely difficult to fully appreciate eating at a 5 star restaurant, while having sex, at the same time as winning a $50M lottery, while watching Schindler's List, having diarrhea, getting punched in the face by Mike Tyson, and simultaneously having it revealed that your life is being broadcast live to the world, like the Truman Show -- granted this is an experience everyone should try at least once, if the opportunity presents itself.
+
+Objections:
+1. Being informed will induce selection bias
+2. System inaccuracy
+3. Decision making, itself, is a valuable experience (reinforced learning)
+
+I appreciate the sentiments you may feel, that seeing data and following a formula will distort / impair your decision-making ability and be counter-productive to achieving spontaneity. This is why I do not suggest you build a system to make decisions for you. Instead, you may consider exploring how a model or framework can help (a) advise you on making choices which optimize your objectives*, (b) evaluate the effectiveness / balance of your approach compared to your goals, expectations, and success criteria and (c) discover or identify unexplored opportunities / low hanging fruit.
+
+A second objection may be, a mathematical model is only "simulating" your decision making process, and it would be unacceptable for it to, even once, diverge/disagree from your thought process. On a scientific note, I encourage you to consider: you, as a person, are using some formula/algorithm to make your decisions, just like a computer does. Spontaneous, irrational decisions are a very real (stochastic) and important part of this formula. The key differentiation (especially as someone with a CEO mentality) is, when you personally make decisions, you feel in charge of, fully aware/informed, and likely responsible (ownership) for your decision. This mentality has many merits: there is both pleasure/utility in the uncertainty and accountability of physically being responsible for making a decision. Additionally, the act of making a decision (just as is true in a computational model) re-enforces your brain's internal decision accuracy (hopefully). On the other hand, restricting/limiting your decision capabilities to that of the human mind (rather than augmenting it with models which enable you to think on bigger scales) is a risk and an opportunity cost.
+
+I think it is wise (and imperative) to be skeptical of blindly following a mathematical model. Being over-controlling/planning (falsely assuming we know the optimal selection/sampling strategy) for our experiences defeats (what I believe to be) your underlying impetus (pure spontaneity). There is (presumably great, untapped) opportunity and value in experiencing things which are illogical, unintuitive, or generally misunderstood. I think of indie music, abstract art, underground restaurants, new startups. Many great things, wine for example, have the potential to be great but take time to mature (if for no other reason than circumstantial; the stars aligning). And these most significant experiences may not be surfaced by some algorithm (due to signal to noise ratio or insufficient data/exposure to show up on radar). They require intuition. But the biggest mistake is that this expertise/intuition cannot be encoded within a model, and that there is not greater benefit within a hybrid, augmented human-computer model.
+
+If you've gotten this far, there are significant reasons why augmenting your goal with a mathematical model is (not just a good idea but is) essential.
+
+Necessity:
+If I am agreeing with your reservations and your thesis, why did I say, "you should consider researching different selection heuristics / strategies for statistical sampling"? 
+
+1. Your mission statement directly references maximization, which is a mathematical optimization (in your case, a stochastic optimization).
+2. People are objectively inferior to computers at estimating[1] and random number generation. That is to say, relying on yourself, you likely won't come close to achieving the "spontaneity" you're after.
+3. We as humans are physically incapable of reasoning about more data than we can possibly digest (let alone reduce the dimensionality of).
+
+Humans are notoriously bad at estimation and generating randomness (you may be significantly better than the mass majority, but if you were to graph your attempts at true randomness against an algorithm, I think you would be discouraged). It's possible you feel your natural heuristics are better / more favorable models than pure randomness. If this is the case, you should strive to encode them so you can programatically make decisions at a larger scale. Again, I am assuming your goal is to maximize your number of spontaneous experiences -- you should mathematically know, by the way, what your definition of spontaneity is and what behaviors (maybe always saying yes) achieve the outcome.
+
+Risks:
+What are the dangers of not having a framework?
+
+1. Local Optima / Unequal distribution
+Especially if your goal is spontaneity (which will mean your experiences will be heavily weighted by the effects of spatial and temporal locality -- things which happen near your location and ...), it's easy 
+
+2. Cycles
+Like any graph search, you can get caught in loops or find yourself making the same choices, unintentionally.
+
+3. Etc ...
+Here's a lecture I gave at the University of Vermont on the PageRank algorithm which discusses the above risks, as well as several other graph search caveats and gotchas: http://www.cs.uvm.edu/~xwu/kdd/PageRank-09.pdf
+
+How / Proposal:
+What specifically should you be systematizing?
+
+The ultimate problem I, in your shoes, would try to address with a mathematical model is, the equivalent of "How do you take a random sampling of the ocean without knowing the ocean's size?". The goal being to leverage tools to augment your brain power and help you reason about problems which require analysis of more data than you can physically keep in your head.
+
+I don't recommend you develop a system for automatically deciding things for you, only a model to post-facto examine and review your experiences to see if they are actually as "spontaneous" as your success criteria and, if so, potentially discover what the consequences of this are (maybe all your experiences are in one geography, maybe there's low hanging fruit to try a certain class of experience; a sport, a relationship for example). As is done within evolutionary computation (see: genetic algorithms), I am referring to testing (manually reviewing, even) how good your selection process is for achieving your desired optimization criteria.
+
+TL;DR (if you only read one section)
+How does this actually manifest? What is the concrete manifestation of such a model? I would create a googledoc spreadsheet and every day (Benjamin Franklin style -- see his autobiography[2]) add an experience entry (or two or three). At the end of each week, check a few key metrics which are important to you concerning spontaneity -- perhaps location, people, domain/activity, emotional response elicited. Try to determine which weeks you had the most profound experiences and what the significant factors or circumstances were.
+
+Challenge: (tongue and cheek)
+Just keep in mind, I am specifically referring to having a framework which allows you to gauge your effectiveness at accomplishing your own goal of constant experiential immersion, and maximizing the quality and quantity of your experiences. You can take this as a challenge (i.e. I can do better without a model), but the only way for you to win the challenge and construct an academically compelling proof would be to develop a mathematical framework to express your results -- which is exactly what I am recommending to begin with. You could also do this anecdotally via approval of peers, a subsidiary metric like "success", "happiness", etc, but it is challenging to eliminate selection bias (one of the risks such a system aims to address).
+
+Closing remarks:
+None of us truly survive our experiences (perhaps via books and in the near future cryogenic freezing). The best we can do is efficiently and effectively use out time here. In terms of choosing a heuristic, I think a good success metric is to see (as you put it best) if you feel you're perpetually outside of your comfort zone.
+
+re: (a) you probably wouldn't / shouldn't want to employ this strategy. It's likely to instill a bias which is indeed counter-productive to your spontaneity. A parallel is the feel of solving a math homework problem and having an answer in the back of the book for comparison -- such a safety net can be disadvantageous when you're faced with a problem having no such solution. Similarly, the same strategy could help you determine which elements of an experience made you feel a certain way, but you expressed concern for knowing / "understanding" why an experience was good. This is something I would want to know but I understand the complications and why you might not.
+
+[1] https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect Research conducted by Burson et al. (2006) set out to test one of the core hypotheses put forth by Kruger and Muller in their paper "Unskilled, unaware, or both? The better-than-average heuristic and statistical regression predict errors in estimates of own performance," "that people at all performance levels are equally poor at estimating their relative performance." In order to test this hypothesis, the authors investigate three different studies, which all manipulated the "perceived difficulty of the tasks and hence participants’ beliefs about their relative standing." The authors found that when researchers presented subjects with moderately difficult tasks, the best and the worst performers actually varied little in their ability to accurately predict their performance. Additionally, they found that with more difficult tasks, the best performers are less accurate in predicting their performance than the worst performers. The authors conclude that these findings suggest that "judges at all skill levels are subject to similar degrees of error."
+
+[2] https://archive.org/details/autobiographybe00frangoog
+
+**** Paul Graham's On Munger
+I was talking to a vp of estates at chase about paul graham's "worldly
+wisdom" essay and I thought someone else may benefit from my response.
+
+the original essay is here: http://ycombinator.com/munger.html
+
+"As per pg's worldly wisdom, the most insightful take home for me is
+considering what one gains or (more interestingly to me) loses while
+scaling. In our case, with Hackerlist, we have tremendous pressure to
+scale up our platform and network but a large part of our value
+proposition is maintaining an unmatched, high quality talent pool of
+software engineers. This, psychologically, is very important for our
+clients. We're also trying to be cautious of how we scale our team
+(i.e.our strategy).
+
+I am inspired by Git's (http://git-scm.com/) distributed approach
+towards source code management and think many companies should aim to
+scale in a similar way. This may be interpreted as any of several
+advantages one gains in such a distributed system; removing a central
+bottleneck or point of failure, increased autonomicity, smaller
+working teams and less communication overhead. Our product reflects
+our belief that the future of employment is predominantly distributed
+and augmented by technology and tools. I believe in many teachings of
+Brooks' Mythical Man Month, that continuously adding people to a
+project (scaling a team) results in diminishing and, at some point,
+negative returns. That said, I also believe there are tools and
+strategies which can be applied to change what this graph looks like;
+to mitigate when and at what rate this problem occurs and in many
+cases eliminate it as a practical concern (it's like the difference
+between choosing a linear versus quadratic algorithm). As an anecdote,
+massive projects, like the Linux Kernel, continue to progress
+relatively quickly, despite their complicated code base and reasonably
+large contributor base, due to effective use of the right technologies
+and strict adherence of strategies + standards for guiding development
+(granted the project's complexity may be a self-selector for reducing
+bike-shedding and allowing natural parallelization of work, but this
+still needs to be coupled with effective and modular code structure +
+a clear development strategy)
+
+I typically find the real bottleneck in projects with large teams is
+intimately tied to communication, manual review, or ineffective
+management or development strategy. This can often be resolved by
+deconstructing and analyzing problematic workflow, identifying areas
+where expensive blocking occurs (i.e. periods where most people are
+blocked / waiting) and then (1) automating process -- i.e. replacing
+human/manually operated components with faster alternatives, (2)
+introducing rules or practices to avoid or minimize these blockers
+(which perhaps we can call management approach), or by (3) physically
+altering the workflow (operations; e.g. substituting more efficient
+steps for less efficient steps or trading off; sacrificing/dropping
+inefficient steps in exchange for time savings).
+
+I think the right management strategies and the right workflow are
+critical, but my bet is technology is currently the lowest hanging
+fruit and the largest, most rapidly evolving, opportunity for gains in
+productivity."
+**** Sean: A Uniftying Theory for Humor
+My friend Sean forwarded me a very interesting read today about
+classifying humor. It look a while to get into, but after getting a
+page or two deep into the article, I read a passage which smacked me
+in the face like a wet noodle. I found this summary to be refreshing,
+elegant, and a great candidate for Occam's Razor:
+
+McGraw and Caleb Warren, a doctoral student, presented their elegantly
+simple formulation in the August 2010 issue of the journal
+Psychological Science. Their paper, “Benign Violations: Making Immoral
+Behavior Funny,” cited scores of philosophers, psychologists, and
+neuroscientists (as well as Mel Brooks and Carol Burnett). The theory
+they lay out: “Laughter and amusement result from violations that are
+simultaneously seen as benign.” That is, they perceive a violation—”of
+personal dignity (e.g., slapstick, physical deformities), linguistic
+norms (e.g., unusual accents, malapropisms), social norms (e.g.,
+eating from a sterile bedpan, strange behaviors), and even moral norms
+(e.g., bestiality, disrespectful behaviors)”—while simultaneously
+recognizing that the violation doesn’t pose a threat to them or their
+worldview. The theory is ludicrously, vaporously simple. But extensive
+field tests revealed nuances, variables that determined exactly how
+funny a joke was perceived to be.
+
+Enjoy the full article @ http://www.wired.com/magazine/2011/04/ff_humorcode
+
+** Be Expressive
+*** Raps
+**** Dolls
+I have a double trouble, tricky, dirty two hair braided master puppet
+With six strings and rusted knife, and god knows where this dummy's stuck it
+Fuck it, chucky snuck in filled his bucket full of blood,
+attack, throat hacked, mouth packed, stacked with layers of mud,
+smiling back through his two buck teeth
+and a laugh like Elmer, Fudd.
+Doc! This ain't no funny dummy, I don't see no bugs bunny,
+
+Better check my flow, cause you know my rhymes are runny--er
+Than your nose, which blows
+and exposes you and shows
+beneath these tattered clothes
+frozen in that aw-kward pose---over
+exposed -- by my polyphonic prose...
+which left you less composed than
+an un--imposing-rosey--
+may Queen-figurine
+transposed against
+an over-caff-i-nated wolverine
+
+My sylla-bles are original, unpredicable, inexplicably ...
+metaphysical, visual, miscible,
+yet so subtley sophistical
+and subliminal it' undeniably undismissible 
+capital hill might as well make it criminally unremissible.
+
+And it's not too supercritical
+to say if they were transmittable --
+
+your pitiful weak spittle might too be
+passably admissible.
+
+*** Poetry
+**** Bark
+Regret is this rotten slab of wood, before my hands how tall you stood.
+How delightful, your cedar sawdust smell, even as your timber fell.
+Your roots, we leave behind, I do not think you'll mind.
+
+I must deny your final boon, to live by helping others bloom,
+No sooner killed than be exhumed, to compliment a well lit room.
+Your imperfections, they must be treated soon.
+
+The pure feel of your finely sanded grains, your identity my fingers
+deliquesce in moments. How many rings have your years painstakingly
+crafted? They will be painted soon.
+
+Your rhytidome, unsightly, stripped; a fresh coat of colored poison
+drips. Should your new skin crack or chip, I'll restore you to your
+former glory. How lovely you'll look soon after, freshly manicured,
+brushed and stroked with tender care, with love. Love for paint, for
+that is which we display.
+
+Do not fret, my cedar tree. This same paint too covers me.
+But lest we be truly seen, as we were meant to be?
+
+**** Winter
+The icy breeze speaks in whispers, with such crisp and chill, even the
+hair on my arms are raised in attention. And the trees with their few
+remaining leaves make no effort to include me in their dance and
+song. Alone, my reality I embrace, air's frozen kiss upon my face, a
+reminder I live in borrowed time and space.  But do I wish I instead
+were warm, kept safe from fret and prey and storm, to live each day
+since I were born 'neath shrouds of safety never torn? No, die I might
+'neath 'morrows sky, I would have naught to sigh, for while a troubled
+life I lead, I led that life and not a lie.
+
+Of the nights' cold and the wind's bitter kiss. Below these heavens, I
+am but for the gentle landing of the sky's refuse. Obliged, I wear its
+dark frost as my evening attire. It weighs upon me, more heavily my
+heart than my shoulders, but that I have accepted it, I cannot alone
+be the one to remove it. And so it became that it is not for the chill
+that I am cold.
+** Be Understanding, Respectful, Open-minded, Considerate
+I need to work on this.
+
+** Be Provenant
+*** Browser Tabs
+**** Work
+***** Pitch Deck
+1. http://venturebeat.com/2014/04/03/8-tips-for-creating-the-perfect-pitch-deck-from-someone-whos-raised-75m/
+2. [[http://www.businessinsider.com/reid-hoffman-startup-advice-and-linkedin-series-b-pitch-deck-2013-10#the-general-rule-is-one-business-model-drives-the-business-its-tempting-to-list-multiple-revenue-streams-because-youre-trying-to-prove-that-you-will-be-big-yet-when-consumer-internet-companies-do-this-investors-generally-see-a-red-flag-3][Reid Hoffman LinkedIn Series B Pitch Deck]]
+3. [[https://docs.google.com/a/hackerlist.net/document/d/1iNS4coP5Eq57mRYB1nK-1HpXEhHzpVuS28UqlQV5mtw/edit#][Upscale Notes]]
+4. [[https://docs.google.com/a/hackerlist.net/presentation/d/1z53G3zpwxPBrFnyZNFyZiiJsHJtJf3HcZOyeEKJqiME/edit#slide=id.p][Upscale Pitch Deck]]
+***** Interface Inspiration
+https://www.hackerrank.com/work
+***** Landing Page
+1. [[https://docs.google.com/a/hackerlist.net/document/d/1LbsSbmvnQYDraPDRkAFOBYF5feP0osrznnzxybFX-74/edit#][Landing Page Copy]]
+***** Current Tech Challenges
+****** Google Hangouts
+***** Lead Gen
+http://pamitc.org/iccv15/jobs.php
+http://www.kdnuggets.com/webcasts/index.html
+http://tricision.com/about-customer-targeting/
+***** Templates
+****** Speaking With Customers
+****** Speaking With Hackers
+****** Speaking With Investors/Advisors
+**** Chinese
+
+**** Music
+**** Misc Articles
+1. http://carlos.bueno.org/all.html
+
+**** Global
+***** Library
+https://archive.org/details/Think_and_Grow_Rich - Think and Grow Rich
+https://archive.org/details/autobiographybe00frangoog - Biography of Benjamin Franklin
+https://archive.org/details/firstsixbooksofe00eucl - Euclid's Elements
+
+***** Queue
+http://www.cs.virginia.edu/~robins/YouAndYourResearch.html -- recommended by Mischief
+
+***** Bookmarks
+****** Philosophy
+
+https://en.wikipedia.org/wiki/Dokk%C5%8Dd%C5%8D
+
+Putting Time In Perspective
+http://waitbutwhy.com/2013/08/putting-time-in-perspective.html
+
+Give it five minutes
+https://signalvnoise.com/posts/3124-give-it-five-minutes
+
+
+******* Epistemology
+Is Justified True Belief Knowledge? - http://www.ditext.com/gettier/gettier.html [U]
+
+http://intuitionanalytics.com/other/knowledgeDatabase/
+http://www.google.com/insidesearch/features/search/knowledge.html
+https://en.wikipedia.org/wiki/Resource_Description_Framework
+http://www.crystalinks.com/euclid.html
+
+******** Knowledge Bases
+http://dbpedia.org/About
+
+******** Provenance
+
+******** Fact verification
+https://github.com/neyer/dewDrop
+
+****** Effective Research
+Cross Validation
+http://edinburghhacklab.com/2013/12/the-main-trick-in-machine-learning/
+
+****** Effective Learning
+
+https://www.khanacademy.org/about/blog/post/95208400815/the-learning-myth-why-ill-never-tell-my-son-hes
+
+****** Effective Management
+******* Remote Teams
+
+https://zapier.com/blog/how-manage-remote-team/
+
+****** Sciences
+******* Neuroscience
+
+http://thehypertextual.com/2013/04/23/social-neuroscience-scarf-model-and-change-management/
+
+******* Mathematics
+https://en.wikipedia.org/wiki/List_of_important_publications_in_mathematics
+
+******** Probabilistic Models
+https://class.coursera.org/pgm-003
+
+******** Linear Algebra
+https://class.coursera.org/matrix-001
+
+******** Topology
+Henri Poincaré, "Analysis Situs" 1895 [U]
+http://www.maths.ed.ac.uk/~aar/papers/poincare2009.pdf -- translation (english)
+http://gallica.bnf.fr/ark:/12148/bpt6k4337198/f7.image -- original (french)
+
+******** Statistics & Probability
+
+Statistics Done Wrong
+http://www.statisticsdonewrong.com/
+
+Probabilistic Programming & Bayesian Methods for Hackers
+http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/
+
+******* Physics
+The Feynman Lectures on Physics
+http://www.feynmanlectures.caltech.edu/
+
+******** Quantum Mechanics
+http://arstechnica.com/science/2012/05/disentangling-the-wave-particle-duality-in-the-double-slit-experiment/
+
+******* Artificial Intelligence
+******** Expert Systems
+********* Recommender Systems
+https://class.coursera.org/recsys-001/auth/auth_redirector?type=login&subtype=normal
+******** Machine Learning
+Caltech, Learning from Data -- https://www.youtube.com/watch?v=mbyG85GZ0PI&hd=1
+Stanford, Machine Learning - https://www.coursera.org/course/ml
+http://datasciencelab.wordpress.com/2014/01/10/machine-learning-classics-the-perceptron/
+http://www.quora.com/What-are-some-good-books-on-machine-learning
+
+16 Free eBooks On Machine Learning! http://efytimes.com/e1/fullnews.asp?edid=121516
+http://natureofcode.com/book/chapter-10-neural-networks/
+********* Deep Learning
+******** Neural Networks & Deep Learning
+https://class.coursera.org/neuralnets-2012-001In
+
+Deep Learning; An MIT Press book in preparation
+http://www.iro.umontreal.ca/~bengioy/dlbook/
+
+Stanford UFLDL
+http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial
+
+
+********* Computer Vision
+https://class.coursera.org/digital-001
+https://class.coursera.org/images-002In
+********** Captchas
+https://www.mashape.com/daizisheng/bypass-captcha
+http://www.boyter.org/decoding-captchas/
+********** Anthropometry
+http://www.openlab.psu.edu/tools/calculators/AnsurDimensionSelect.php
+
+Performance of a 2D image-based anthropometric measurement and
+clothing sizing system PIERRE MEUNIER† and SHI YIN‡
+http://www.vis.ca/paper/ICESS.html
+
+Development of Digital Anthropometric Circumferential 
+Measurement System Based on Two Dimensional Images 
+http://apiems.net/archive/apiems2010/pdf/HF/572.pdf
+
+
+Precise Evaluation of Anthropometric 2D Software Processing of Hand in Comparison with Direct Method
+Ehsanollah Habibi, Shiva Soury, and Akbar Hasan Zadeh
+http://pubmedcentralcanada.ca/pmcc/articles/PMC3967428/
+
+Study of 2D Automatic Anthropometric and Pattern Generation System 
+http://www.aicit.org/IJACT/ppl/IJACT2502PPL.pdf
+
+Automatic Human Body Parts Detection in a 2D Anthropometric System
+http://link.springer.com/chapter/10.1007%2F978-3-642-33191-6_53
+
+Anthropometry, Apparel Sizing and Design edited by Deepti Gupta, Norsaadah Zakaria
+http://books.google.com/books?id=swCjAgAAQBAJ&pg=PA65&lpg=PA65&dq=2D+image+anthropometric+sizing+system&source=bl&ots=r7tMTRkW7j&sig=V9tkblnKMebaaEowxUja5N54ieM&hl=en&sa=X&ei=oNu7U-acHY-BogSzroDgCw&ved=0CF4Q6AEwCw#v=onepage&q=2D%20image%20anthropometric%20sizing%20system&f=false
+
+Statistical Estimation of Human Anthropometry from a Single Uncalibrated Image
+http://www.umiacs.umd.edu/~yaser/BookChapter.pdf
+
+Performance of a 2D image-based anthropometric measurement and clothing sizing system.
+http://www.ncbi.nlm.nih.gov/pubmed/11059458
+
+A practical synopsis of methods of measurement in physical anthropology.
+Montagu, M. F. Ashley
+http://psycnet.apa.org/books/12018/
+
+Measurement Techniques in Anthropometry
+http://books.google.com/books?hl=en&lr=&id=Bkk8FuB0P4IC&oi=fnd&pg=PA25&dq=anthropometry&ots=u5VtM4Omn-&sig=jvw93c_hXtEKfbiUrwvFcAGC-aY#v=onepage&q=anthropometry&f=false
+
+International Journal on Advances in Intelligent Systems, vol 6 no 3 & 4, year 2013, http://www.iariajournals.org/intelligent_systems/
+A Human Surface Prediction Model Based on Linear Anthropometry
+file:///home/mek/Downloads/intsys_v6_n34_2013_5.pdf
+
+******* Computer Science / Metamathematics
+******** Concepts
+     Big O Notation
+https://www.interviewcake.com/big-o-notation-time-and-space-complexity
+******** Tools
+********* K-Maps
+K-Maps to simplify boolean algebra expressions
+https://en.wikipedia.org/wiki/Karnaugh_map#Don.27t_cares
+********* Regex
+http://nbviewer.ipython.org/url/norvig.com/ipython/xkcd1313.ipynb
+******** Topics
+Understanding Partial Application and Currying
+http://abdulapopoola.com/2014/08/18/understanding-partial-application-and-currying/
+
+******** Programming Languages
+********* Go
+http://learnxinyminutes.com/docs/go/
+
+********* Shell
+http://www.shelldorado.com/links/
+
+********* Python
+How fast can we make interpreted Python?
+http://arxiv.org/abs/1306.6047
+
+Python performance
+http://www.huyng.com/posts/python-performance-analysis/
+
+Debugging Python
+https://zapier.com/engineering/debugging-python-boss/
+
+Python Decorators List
+https://wiki.python.org/moin/PythonDecoratorLibrary
+
+http://akaptur.github.io/blog/2013/11/15/introduction-to-the-python-interpreter-2/
+http://lucumr.pocoo.org/2014/8/24/revenge-of-the-types/
+http://jessenoller.com/good-to-great-python-reads/
+https://packaging.python.org/en/latest/ -- packaging
+http://guillaume.segu.in/blog/code/487/optimizing-memory-usage-in-python-a-case-study/
+
+********* Haskell
+********* OCaml
+http://queue.acm.org/detail.cfm?id=2038036
+http://www.fatvat.co.uk/2009/08/some-haskell-data-structures.html
+******** Scaling Infrastructure
+http://www.kegel.com/c10k.html
+******* Philology
+******** Linguistics / NLP
+https://class.coursera.org/nlp
+https://class.coursera.org/nlangp-001
+
+Coursera Columbia University NLP
+https://www.coursera.org/course/nlangp?from_restricted_preview=1&course_id=970276&r=https%3A%2F%2Fclass.coursera.org%2Fnlangp-001%2Fclass
+
+Log Mining
+http://isquared.wordpress.com/2014/04/24/mining-search-logs-for-usage-patterns/
+
+Natural Language Processing
+http://www.nltk.org/book/
+
+******** Philology / Languages
+********* Chinese
+********** Dictionary
+http://www.wordreference.com/zhen/
+********** Literature
+http://ctext.org/art-of-war/laying-plans?en=off
+
+****** Epistemology
+Library Genesis
+http://gen.lib.rus.ec/
+
+****** Data Science
+Data Science - https://www.coursera.org/course/datasci
+http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html
+
+****** Publishing Industry
+
+http://www.slj.com/2013/06/research/sljs-average-book-prices-2013/
+
+****** Hardware
+
+******* Hardware-Software Interfaces
+https://class.coursera.org/hwswinterface-002
+
+******* Electrical Engineering
+https://class.coursera.org/eefun-001/auth/auth_redirector?type=login&subtype=normal
+
+****** Programming 
+https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#professional-development
+
+******* Environment
+
+SSH Kung Fu
+http://blog.tjll.net/ssh-kung-fu/
+
+http://www.harding.motd.ca/autossh/
+
+
+******** Editors
+http://editorconfig.org/
+********* Vi / Vim
+http://learnvimscriptthehardway.stevelosh.com/preface.html
+http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
+http://vimcasts.org/
+********* Emacs
+http://batsov.com/articles/2012/02/19/package-management-in-emacs-the-good-the-bad-and-the-ugly/
+
+******* Agile Workflows
+
+http://www.versionone.com/
+
+
+******* Neuroscience
+http://thehypertextual.com/2013/04/23/social-neuroscience-scarf-model-and-change-management/
+
+
+
+******* Improve Programming
+http://codingbat.com/
+http://exercism.io/
+http://bob.ippoli.to/archives/2013/09/18/exercism/
+http://cm.bell-labs.com/cm/cs/tpop/
+
+
+
+
+******* Software Quality Assurance & Tooling
+
+******** Git
+http://marklodato.github.io/visual-git-guide/index-en.html
+https://github.com/cjbarber/ToolsOfTheTrade
+https://github.com/nvie/gitflow
+http://www.nolte-schamm.za.net/2013/05/git-rebase-fun/
+
+******** Dependency Management
+
+https://gemnasium.com/
+
+****** Design Principles
+
+https://news.layervault.com/
+http://soshitech.com/2014/01/27/why-simple-websites-are-scientifically-superior/
+
+******* Frameworks
+
+http://www.getskeleton.com/
+http://purecss.io/base/
+http://www.polymer-project.org/
+
+****** Visualizations
+
+http://mariandoerk.de/
+
+****** Influential Books
+
+http://cspray.github.io/my.so-archive/100-most-influential-programming-books.html
+
+****** Information Retrieval / Search
+******* Entity Resolution
+****** Papers
+https://www.academia.edu/4404136/Entity_Matching_in_Online_Social_Networks Entity Matching in Online Social Networks
+- The best single feature is “Jaro Winkler Name Similarity” with AUC of 0.9504 (based on the “only x” procedure).
+- The top five features are all name based features.
+https://www.cs.umd.edu/~mbilgic/pdfs/gd05.pdf D-Dupe: An Interactive Tool for Entity Resolution in Social Networks (University of Maryland)
+http://vldb.org/pvldb/vol5/p2018_lisegetoor_vldb2012.pdf Entity Resolution: Theory, Practice & Open Challenges
+http://arxiv.org/abs/1404.3017 A Link-based Approach to Entity Resolution in Social Networks
+****** APIs
+http://www.publicapis.com/fullcontact/fullcontact-person
+http://www.publicapis.com/community/disco
+******* People Search
+http://stackwho.herokuapp.com/
+
+****** Movie Analysis
+
+http://bugra.github.io/work/notes/2014-02-15/imdb-top-100K-movies-analysis-in-depth-part-1/
+http://grouplens.org/
+
+****** Reading List
+
+****** Business & Entrepreneurship
+
+******* Incorporation
+1. Incorporating, Incorporation Questionaires
+2. MoU
+3. RSPAs, Stock Certificates, 83(b)
+- https://sharewave.com/
+- https://www.esharesinc.com/
+- http://www.startupcompanylawyer.com/2008/02/15/what-is-an-83b-election/
+
+******* Executive Summary, Pitch Deck
+Estimating lifetime value [U]
+http://lsvp.com/2012/06/15/how-to-estimate-lifetime-value-for-an-ecommerce-business-sample-cohort-analysis/
+
+******* Pitching, Presenting
+http://justinkan.com/how-to-pitch-your-startup-on-stage
+
+******* Pricing
+http://conversionxl.com/pricing-experiments-you-might-not-know-but-can-learn-from/
+
+******* Companies I follow
+
+1. http://smarterer.com/
+
+
+
+
+******* Growth Campaigns
+
+http://andrewchen.co/2014/07/08/theres-only-a-few-ways-to-scale-user-growth-and-heres-the-list/
+http://u-psa.de/cheat-sheets/seo-onpage-cheat-sheet.pdf
+http://gibbon.co/hatimotarid/master-inbound-marketing/the-persona-driven-keyword-research-process
+http://www.evanmiller.org/how-not-to-run-an-ab-test.html
+http://www.qubitproducts.com/sites/default/files/pdf/most_winning_ab_test_results_are_illusory.pdf
+
+****** Music
+******* Sightreading
+http://www.zebrakeys.com/lessons/preparation/pianolayout/?id=1
+
+
+****** Userful UI Components
+http://demos.telerik.com/kendo-ui/gantt/index
+http://bl.ocks.org/mbostock/1667367
+http://www.billdwhite.com/wordpress/2013/08/15/d3-treemap-label-truncation/
+http://bost.ocks.org/mike/sankey/
+
+******* Drew Winget Recommendations
+I would recommend this after having read Interactive Data Visualisation for the Web (This is a short, easy book, assuming you have a little patience), and these articles by Mike Bostock:
+http://bost.ocks.org/mike/join/
+http://bost.ocks.org/mike/circles/
+http://bl.ocks.org/mbostock/3808218
+http://bl.ocks.org/mbostock/3808221
+
+The Presentation on how d3.js binds data under the hood.
+
+To get deeper, read: http://bost.ocks.org/mike/selection/
+
+
+****** Hackerlist
+******* Software to try
+
+http://close.io/
+
+******* Employment Websites
+http://careers.stackoverflow.com/jobs/tag/face-recognition
+https://www.employiq.com/jobs/all/c-programming
+
+****** Hackerquarters
+*** Daily Journals
+**** Learning Chinese
+***** Learning, in general
+
+Learning involves two stages. Learning how to learn, and then actually
+learning. That is to say, a substantial portion of the learning
+process for a new domain involves determining which practices,
+resources, and methods are most effective. Building an effective
+learning model or framework requires one first has choosen criteria
+for measuring or evaluating progress, which is typically satisfied by
+a set of goals.
+
+****** Choosing Goals
+My goals is to be able to have:
+1. text conversations 
+2. translate and read a chinese classic piece of literature
+3. participate in basic conversation
+4. read signs in san francisco
+5. travel to china without dying, or worse, offending anyone
+
+****** Successful Frameworks
+In some cases where we have prior experience, we can apply
+methodologies we've identified as successful to similar domains. Many
+techniques for learning French can be obtained, for instance, from
+having first learned another romance language. For a topic which
+is significantly foreign to us, we must rely on others' knowledge
+(e.g. take a course, read a book, hire a tutor) or evolve our own
+strategies and frameworks to structure our learning.
+
+If this is an exercise which you find challenging, consider reading a
+book like Polya's, "How to Solve It" [3] or "How to Learn Anything
+Quickly" [4]. It may seem silly, but learning strategies for
+approaching learning (while quite meta in principle) is much the same
+as "teaching a [wo]man to fish".
+
+****** Words of warning
+My personal experience is, great resources can come from anywhere, but
+they are often incomplete (in terms of gaps in content or
+unsatisfactory features) and need to be supplimented with other
+sources. An example is relying on one website for learning stroke
+order and another for pronounciation. There is a lot of risk in
+relying on too many fragmented sources as they will likely have
+disagreements about what content should be introduced and
+when. Additionally, context switching (changing from concentrating on
+one source to another) is distracting -- it takes time to adjust to
+different teaching styles.
+
+Building your framework or strategies on top a central foundation,
+like a lesson book or a native speaking tutor is likely the most
+effective (not necessarily the cheapest) way to bootstrap learning.
+
+****** My Learning Philosophy
+
+My personal preference is, I prefer not spending money on
+resources. I'd much rather repay the community with learnings of my
+own. That said, I appreciate some resources require significant
+investment and care in order to exist and if I have to pay for
+anything, I'd rather it be knowledge. Wikipedia and the Internet
+Archive, for instance, have necessary server and electricity costs in
+order to be able to provide their services to the public -- I take
+pride in supporting these costly initiatives which aim to make
+knowledge more open and accessible.
+
+That said, as I believe knowledge should be accessible to everyone, I
+am going to try to highlight resources which can be legally obtained,
+free of charge.
+
+
+***** Why Chinese
+
+Largest population. More than 5 times more people speak Mandarin
+Chinese than speak English. [1]
+
+Applicability / Competitive Advantage. There is a large spanish
+speaking community in california. Spanish is a more widely spoken
+language than English, world wide. I took spanish for five
+years. Other than ordering food in Spanish restaurants, reading the
+occasional spanish news paper, and travelling to Mexico and Costa
+Rica, I haven't had many practical opportunities for applying the
+language. Perhaps this is due to cultural differences or a side effect
+of not having many spanish friends I can speak with on a regular
+basis. My personal experience is, I found a lot more Chinese speaking
+people in my computer science classes than Spanish speaking and
+honestly, being able to communicate with academics and researchers who
+share my interests is very important to me. Finally, a great deal of
+the world's manufactoring occurs in China. If you can't ask questions
+as a native, it's easy to be taken advantage of.
+
+Friends. The top reason why I am learning chinese is, I have a lot of
+smart friends who I respect who decided to learn Chinese. I don't want
+to be left out of conversations.
+
+It's different. German, french, spanish, and itallian are all
+relatively similar. They use roman characters, have comparable
+grammars, and even cognates. If you know a few words in a sentence,
+there's a chance you can guess the other words. Moreover, you can at
+least sound them out and read these languages, even if you have no
+idea what you're reading. Chinese, on the other hand, is like learning
+two languages: the written language and the spoken language. I am
+unaware of any way (patterns, strategies) of infering written
+characters from spoken Chinese or vice versa. By the way, did you know
+vice versa means "a change", "an alternate order" (vice) "turn about"
+(versa) -- thus the "order turned about"? I find etymology, as in this
+example, to be a great way to remember words, discover similar roots,
+and achieve greater understanding of a language.
+
+Cultural Insight, Literature. The language has unique idioms and
+insights. There The Four Books & Five Classics [2], The Art of War
+
+[1] http://www.infoplease.com/ipa/A0775272.html
+[2] https://en.wikipedia.org/wiki/Four_Books
+[3] http://books.google.com/books/about/How_to_Solve_It.html?id=z_hsbu9kyQQC
+[4] http://www.amazon.com/Learn-Anything-Quickly-Ricki-Linksman/dp/0760728364
+
+
+***** If not Chinese
+
+I contemplated learning japanese, but there just aren't enough
+speakers outside of japan. I occassionally read manga or watch anime
+so I thought these activities could be a good way to keep myself
+engaged and accountable to practicing a language. I also have
+contemplated learning hebrew, croation, or russian, because I have
+family in these places and the languages offer similar challenges.
+
+I can sound out basic german, french, and spanish phonetically. Given
+chinese characters (hanzi) I am complete illiterate.
+
+
+***** Experiments
+
+1. I am going to pick one piece of classic Chinese literature and start learning / copying its characters and translating it.
+
+2. Conversations
+
+
+***** Resources (in order of discovery)
+
+****** Dialogues
+https://www.youtube.com/playlist?list=PL0A5BF42C1FBB672B
+http://cctv.cntv.cn/lm/learningchinese/program/index.shtml
+
+****** Phrases
+https://en.wikibooks.org/wiki/Chinese_(Mandarin)/Lesson_2
+
+****** Character Lookup
+
+http://www.nciku.com/
+
+****** Dictionaries
+
+http://www.mdbg.net/chindict
+http://www.nciku.com/
+
+****** Explained Texts
+
+http://ctext.org/dictionary.pl?if=en&id=20910
+
+****** Pronounciations
+
+http://dictionary.hantrainerpro.com/
+http://www.standardmandarin.com/
+http://www.nciku.com/
+
+****** Stroke Order
+
+http://www.chinesehideout.com/tools/strokeorder/index.php?c=%E4%BD%A0%E5%A5%BD
+
+
+***** First steps
+
+Learning Chinese so far has been a frustrating process, mostly because
+learning a language, itself, is an art. What is the best way to
+practice? What are the best resources? What are common mistakes?
+
+I decided it could be helpful for me to document my progress.
+
+****** Choose a Goals
+My goals is to be able to have
+1. text conversation
+2. read ____
+3. speak basic conversation
+4. read signs in san francisco
+5. travel to china and not die
+
+****** Process
+
+1. graspchinese.com
+
+I keep an electronic document with words as 
+
+
+2. Lined paper
+
+
+2. Flashcards
+
+I use paper flash cards as one of the most important elements to
+memorizing chinese characters (or hanzi) is drawing them using the
+correct stroke orders.
+
+3. Literal meaning
+
+Don't settle for colloquial translations, try to understand literal
+meaning. For instance, it is often taught that 你好 (Ni3 Hao3) means
+hello. It really means "you" (ni3) "good" (hao3). Once you commit to
+breaking phrases down to, and understanding, the language's simplest
+components, you begin to notice trends which make future learning much
+faster.
+
+
+
+***** What to read
+https://en.wikipedia.org/wiki/Four_Books_and_Five_Classics
+
+**** Learning Music
+**** Learning Math
+
+*** The Browser Graph
+Objective: Browser extension, passively record all links visited (and
+their order / path of access). Provide keyboard shortcuts to
+"favorite", "ignore", etc. Label + tag resources as collections.
+**** Meta Provenance Example (Browser Graph)
+
+[[https://www.google.com/search?q=build+a+graph+of+every+webpage&oq=build+a+graph+of+every+webpage&aqs=chrome.0.69i57j69i62l3.4737j0&sourceid=chrome&ie=UTF-8#q=graph+browser+history][Google: graph browser history]]
+    http://www.donationcoder.com/forum/index.php?topic=25960.0
+	http://publicmind.in/blog/firefox-extensions-to-improve-history-tools/ 21:00 2014-02-09 Sun
+
+    [[http://sean.voisen.org/blog/2007/02/the-broken-browser-history/][The broken browser history - February 25, 2007]]    
+        [[http://pathway.screenager.be/download/][Pathway]] - Sean Voisen, "Pathway is the first step I’ve seen towards browser history done
+	right. A Mac application designed for navigating Wikipedia, Pathway
+	records your browsing history as a traversable spring graph, making it
+	easy to see and immediately remember how you moved from one article in
+	Wikipedia to another. Nodes are added to the graph as pages are
+	loaded, with lines between nodes representing the path followed from
+	one page to the next. Relationships are made obvious."
+
+    [[http://superuser.com/questions/49192/is-there-a-browser-which-saves-history-as-a-graph][stack exchange: Is there a browser which saves history as a graph]]
+        [[https://addons.mozilla.org/en-US/firefox/addon/session-history-tree/][Firefox Add-On Session History Tree 1.0.1]]
+	[[https://chrome.google.com/webstore/detail/visual-history/emnpecigdjglcgfabfnmlphhgfdifaan][Chrome Extension: Visual History]]
+
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=6&ved=0CGAQFjAF&url=http%3A%2F%2Farxiv.org%2Fpdf%2F1304.2610&ei=m1L4UvHdG5LboATa5oHQAw&usg=AFQjCNHM3SaUiq9lrNYE8OJQ5fBtoqRBzA&bvm=bv.60983673,d.cGU&cad=rja
+
+http://ausweb.scu.edu.au/aw99/papers/eklund2/paper.html
+http://www.cs.umd.edu/hcil/pad++/papers/hypertext-98-padprints
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&ved=0CCkQFjAA&url=http%3A%2F%2Fwww.academia.edu%2F2035515%2FNAVIR_Navigation_and_Visualization_of_Information_Retrieved&ei=Q1b4UoHmM8HooATh24LYCw&usg=AFQjCNEEMtqaGjw7F5_1UqSNQPVMZeVfNA&bvm=bv.60983673,d.cGU
+
+For Mark: http://www.esstt.rnu.tn/utic/tica2007/sys_files/medias/docs/p10.pdf
+
+http://joel.dumoulin.home.hefr.ch/Projects/NAVIR/index.html
+http://joel.dumoulin.ch/projects/ -- found email: joel.dumoulin@hes-so.ch
+http://joel.dumoulin.home.hefr.ch/Projects/NAVIR/Prototype/NAVIR.html
+http://www.ra.ethz.ch/cdstore/www6/Posters/710/hg.html
+
+**** Implementations
+***** Santiago Ortiz (the master)
+Goal: [[http://intuitionanalytics.com/other/knowledgeDatabase/][Santiago Ortiz's Personal Knowledge Graph]]
+Storage: https://delicious.com/moebio
+[[http://searchengineland.com/10-alternatives-to-delicious-com-bookmarking-59058][10 alternatives to Delicious (for bookmarks)]]
+***** Browser Extensions
+****** HistoryTree (provenace)
+http://appscout.pcmag.com/web-browsers/271353-history-tree-lets-you-visualize-your-firefox-browsing-history
+****** VisualHistory
+https://chrome.google.com/webstore/detail/visual-history/emnpecigdjglcgfabfnmlphhgfdifaan
+***** Designs
+http://research.ecuad.ca/lightbeam/hypothesis1.html
+***** Guess - Graph Exploration System
+http://guess.wikispot.org/Bookmarks
+
+**** Academic Research
+http://furius.ca/tengis/doc/design/design.html
+http://arxiv.org/pdf/1304.2610.pdf
+http://www.cs.umd.edu/class/spring2001/cmsc838b/Apps/presentations/Matthias_Mayer/
+
+*** Provenance
+**** Nginx SNI
+**** Google Hangouts + OAuth
+1. [[https://developers.google.com/+/web/signin/server-side-flow][Google+ Server Side Oauth Flow]]
+2. For python3.4 pip install git+https://github.com/enorvelle/GoogleApiPython3x.git
+3. [[https://console.developers.google.com/project/600878003368/apiui/credential?authuser=1][Get/Set Oauth Credentials]]
+4. [[https://code.google.com/apis/console/b/1/?noredirect&pli=1#project:600878003368:hangout][Hangout App settings]]
+5. [[https://security.google.com/settings/u/1/security/permissions?pli=1][Revoking OAuth Access (for testing)]]
+6. [[https://developers.google.com/+/hangouts/button#invite_parameters][Hangout Buttons]]
+7. [[https://support.google.com/a/answer/2691194?hl=en][Your or may need to enable OnAir for HoA]]
+8. [[https://www.youtube.com/watch?v=ia3Hr0qAEac][Youtube live coding session on Hangouts]]
+9. [[http://life.scarygami.net/hangoutapps/][Step by step tutorial on hangouts (1 of 2)]]
+10. [[http://life.scarygami.net/hangoutapps2/][Step by step tutorial on hangouts (2 of 2)]]
+11. [[https://www.youtube.com/watch?v=Al4SbeVyLm4&feature=youtu.be][Youtube video on: Including Hangout in your Website]]
+
+**** Steps for starting a startup
+http://www.orrick.com/Practices/Emerging-Companies/Startup-Forms/Pages/Forms-Founders.aspx
+- 83(b)
+**** Presence tracking + notification systems
+**** Price perception
+1. [UNREAD] http://harvardmagazine.com/2006/03/the-marketplace-of-perce.html
+2. [IMPORTANT FIGURE] http://en.wikipedia.org/wiki/Dan_Ariely
+
 
 10. Machine Learning
 [UNREAD] http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial
 [DATASET] https://www.kaggle.com/c/facebook-recruiting-iii-keyword-extraction/data
 
-11. Javascript resources
-http://yeoman.io/
-* Rules
-1. Track how much time task took + delta of prediction
-2. Calculate best # of tasks / hours per day (in terms of achievability)
+** Be Accountable & Just
+Every time I read a link (or at least for some class / category of
+resource) I should need to write a sentence as to why I am visiting
+the link, what it accomplishes. This friction is necessary.
 
-* Goals
-** 5 Year Goals
-*** Programming Languages
-1. Learn Haskell
-2. Learn Clojure
-*** read sheet music for piano + guitar
-*** Learn languages
-- [ ] Learn conversational Chinese (Mandarin)
-- [ ] Learn conversational Spanish
-- [ ] Learn conversational French
+^ PROVE IT. (document or it didn't happen)
 
-*** Create a usb device + write device driver/module (C + EE)
-1. [ ] Read K&R C Programming Language
-2. [ ] The Unix Programming Environment
-3. [ ] Become better at bash
+** Be Sustainable
+*** Smart Homes
+** Be a Curate
+*** The Laws of Science
 
-*** Mathematics
-1. Linear Algebra
-2. Difeq
-3. Calculus
+*** The Branches of Mathematics
+Towards a navigatable dependency graph for all topics of mathematics and everything.
+http://www.math.niu.edu/~rusin/known-math/index/
+*** Epistemology: Types of Questions
+What formal research (mathematics) is being done towards enumerating
+all types of questions into axiomatic classes? Who researches
+epistemology whom I can speak with?
 
-*** Algorithms
-https://class.coursera.org/algs4partI-003/lecture/index
-*** Learn python better
-1. [ ] Port web.py to python3
-2. [ ] Learn scipy + numpy
-3. [ ] Debugging
-*** Statistics - Housing in SF
-1. [ ] Learn Statistics
+Who, what, when, where, why, and how are fine top-level axioms
+(emergent from language) but it's unclear whether they are
+exhaustive. More importantly, by themselves / absent of context, they
+only communicate (or constitute) part of a question. It does make me
+curious, from a philology perspective, whether there are languages
+which present additional directives for phrasing questions.
 
-*** Complete Andrew Ng's Machine Learning Course w/ passing grade
-1. [ ] Machine Learning
+I am more interested (than these directives) in a formal computer
+system being capable of composing (read: asking) any question a human
+can, and constructing questions we haven't thought to ask yet. I don't
+think an "exhaustive" framework is achievable, but I do think we can
+approach it within the context of different dimensions. That is to
+say, I assume as we create more advanced frameworks for asking
+questions, we'll be able to ask higher dimensional questions (just
+like, in the context of math, a full understanding of a point in 1D
+allows us to speculate about lines in 2D and, inductively, that of
+planes in 3D, and so on).
 
-*** Create a smart email client w/ summarization (Math)
-1. [ ] Create a summarizer in NLP (read some ntlk book)
+I believe there is a limit (namely time; lifespan, human race, and
+rate of biological evolution) to what a person can think and
+conceptualize. Computers have the potential to help us frame and ask
+questions we can't conceptualize or reason (there's a limit to what we
+can experience, in terms of biological sensors, signal processing &
+computational power, and dimensionality reduction). I believe this is
+the only practical, sustainable solution to the future of research and
+towards our understanding of topics like quantum mechanics (which
+increase in complexity and often experiment cost and diminish in
+returns). Here's an incredibly corny video which anecdotally
+demonstrates the limits of our understanding :
+https://www.youtube.com/watch…
 
-** TODO August 2013-08 
-*** TODO Week 1 
-1. [X] EE - 3 hours of Electrical Engineering
-2. [X] STATS - 4 hours of Statistics (1 ch. per week + problems)
-3. [X] UNIX - 1 hour of Unix (up to ch. 1.2)
-4. [X] LANG - 2 hours of Spanish/French per week
-**** TODO 2013-08-17 Saturday, August 17, 2013
-***** Trello
-1. [X] Set Personal trello
-2. [X] Set Hackerlist trello
-***** Learn 
-1. [X] Electrical engineering 1 hour
-**** 2013-08-18 Sunday, August 18, 2013
-***** Trello
-1. [X] Set Personal trello
-2. [X] Set Hackerlist trello
-***** Learn
-1. [X] French (duolingo) 1 hour
-2. [X] Read Ch. 1 of Think Stats: Probability and Statistics for Programmers 
-goal: read chapter 1, 3pm coffee @ fourbarrel + statistics
-cmd: evince ~/4-Library/thinkstats.pdf -p 13 # to 21
-4. [X] Read Ch. 1 of The Unix Programming Environment
-*** TODO Week 2
-1. [ ] STATS - Read Ch.2 Statistics + problems
-2. [ ] UNIX - Read Ch.2 Unix + problems
-3. [ ] LANG - 2 hours of Spanish/French per week
-4. [ ] C - Read Ch.1 + problems
-**** 2013-08-19 Monday, August 19, 2013
-***** Trello
-1. [ ] Set Personal trello
-2. [ ] Set Hackerlist trello
+Example Axioms:
+- How do we classify x (classification is a top-level axiom, perhaps?)
+-- What are the properties of x
+-- What is the functional relationship between x and y
+--- How does x behave
+---- Why does x exhibit y
+---- What does x ___ like? (where ___ is a sense)
+--- What depends on x / does x depend on (DAG)
+--- What happens when one applies, maps, reduces y / x
+-- What is the probability of x (given a ... y, z)
+-- What is measurably similar to x (and how/what do we measure)
 
-* Ideas
-clustering on employment to discover which markets are underserved
+Many of these questions have native encodings / abstractions within
+programming languages -- compareTo, map/apply/reduce. Maybe I am
+applying too many preconceived CS biases.
 
-* Life Lessons
-** Organize your life as early as possible
+1) Leslie Wilson suggests[1] the general categories:
+- factual
+- convergent
+- divergent
+- evaluative
+- combinatorial
 
-*** Things I organize
+2) 6 Types of Socratic Questions:
+These are more universal axis/dimensions of problem solving than
+"questions" -- and maybe this is a more fruitful approach. I've taken
+some liberties in summarizing them.
+1. clarification, disambiguation, relevance
+2. test assumptions
+3. test evidence/reasoning
+4. viewpoints and perspectives (contexts)
+5. hypothesis / implications / applications & consequences
+6. meta-questions (semantics, relations) -- seems similar to 1
+
+3) Bloom's Taxonomy:
+1. knowledge
+2. comprehension
+3. application
+4. analysis
+5. synthesis
+
+[1] http://thesecondprinciple.com/t…/five-basic-types-questions/
+[2] http://www.umich.edu/~eleme…/probsolv/strategy/cthinking.htm
+[3] https://en.wikipedia.org/wiki/Question
+
+** Be Efficient
+*** Create the next Web Browser
+
+*** Business, Templated
+Stub: Decision Trees and Flow Charts for Automating Business
+*** A Framework for Life Goals
+Noam Samuel, I think being more quantitative helps, i.e. being able to
+objectively measure your impact. If no such framework exists for doing
+this within a given problem space, then I believe this itself is the
+most noble goal one can have (and the lowest hanging fruit, I think,
+in all of society). Einstein, Franklin, Euclid, Newton, Sun Tzu,
+accomplished fantastic things, but above all they left us frameworks
+for constructing, framing, and evaluating problems. Sometimes the
+framework itself becomes an entire discipline/school of thought. The
+computer is the single greatest manifestation of such a framework (the
+underlying framework being math, computer science being its accessible
+implementation; metamathematics). It's purity, in my mind, comes from
+its axiomatic construction (infinitely provable from the ground up,
+giving rise to exciting corollaries and possibilities, like
+Curry-Howard Isomorphism).
+
+Assuming an appropriate framework exists, identifying motivation will
+help you choose the right axis on which to measure impact/success. Do
+you want to create ideas which will last for 3000 years? I do: this is
+a criterion/principle on which my life is guided.
+
+A framework for accountability and self-evaluation (quantified self)
+is equally as important as the framework / life goal you aim to
+pioneer. Ben Franklin, in his autobiography (appropriately named the
+Autobiography of Ben Franklin) presents several strategies. It's
+important that your motivation also be quantifiable and not "to help
+as many people as I can" or to "spread happiness". At the same time,
+there is a science to setting goals (and sometimes the psychology of
+setting a goal can limit your success, or accelerate it).
+
+If you're motivated by a mindset or philosophy (e.g. people should
+care about knowledge), it's important to be able to envision the world
+you want to exist (what such a society looks like) and leave a
+comprehensive path/breadcrumbs (framework) towards achieving/realizing
+as much of this world as possible. This impetus, the big picture /
+destination, is the source of your motivation.
+
+With the right destination in mind, and the right motivation, the
+correct accountability framework for realizing your goals, and the
+right framework for documenting and evaluating your progress
+(e.g. literate programming, paper trail + notes, observations), you'll
+have an informed foundation for answering the questions you ask:
+
+"How do you know whether a focus you have chosen in your life enriches
+it? Whom do you trust to tell you?"
+
+Or at very least, you'll leave behind a language or framework (system
+and axioms) which empowers others to continue your work.
+
+*** Towards More Efficient Political Voting
+Call me "unpatriotic", our current implementation of voting in the
+United States seems less effective than bikeshedding.
+
+We, the moderately informed people, passionately cast our vote for a
+painter whom we think we can trust to execute the few bikeshed
+features we think we understand and endorse, based on anecdotes from
+media which shows us only certain angles of "some"
+bikeshed-in-progress. The painter then proceeds to do whatever she or
+he wants, without much liability, in accordance with rules and
+regulations from the painters union of which we, the average people,
+can't reasonably be expected to understand.
+
+Americans understand a lot of other things, like what we believe, what
+we value, and what we want to see. But manually reducing/converting
+these sparse, abstract, highly dimensional beliefs into a binary
+decision for a single person (of whom we have limited and biased
+information) seems like a recipe for a badly painted bikeshed. (Voting
+on propositions is a better idea on the basis it bypasses this
+detrimental "encoding" / translation process and provides a scenario
+wherein it is clearer the issue being voted.)
+
+While Baidu has produced technology to predict the 2014 FIFA World Cup
+results with 100% accuracy [1], 284 US "experts" who make their living
+"commenting or offering advice on political and economic trends,”
+scored worse on 82,361 forecasts (presented with 3 possible futures in
+a statistical study) than had they assigned each option an equal
+probability [2]. These results might suggest both that our current
+system isn't well suited for the laymen or the expert and that there
+is a massive opportunity to augment the electoral process with
+technology.
+
+In terms of electing qualified candidates, wouldn't it make more sense
+to inform the public by building a matrix (user-item collaborative
+filtering system) of political candidates (on one axis) and their
+actual/recorded voting history on policies (on the other axis) and
+then have an online survey with concrete questions (whose weights /
+importance can be specified by the participant) in order to see,
+statistically, which candidate has performed in a manner which best
+aligns with your position? The media (or your private online
+dashboard) can then statistically show, over time, to what degree a
+politician is deviating / has changed course from their past voting
+history. I know there's plenty of research[3] on such political
+recommender systems and likely implementations which are being used in
+practice (which I'd love to hear about).
+
+The TL;DR is, I genuinely believe voting for candidates (versus
+propositions) using our current electoral system (even if you identify
+as an informed citizen) has the potential to be more detrimental that
+abstaining your vote.
+
+I'm not claiming that voting doesn't matter -- it does. I am claiming
+that for which we vote is not the same as what we get, and thus that
+an honest vote can empower injustice.
+
+[1] http://trends.baidu.com/worldcup/events/knockout?locale=en
+[2] http://www.newyorker.com/magaz…/…/12/05/everybodys-an-expert
+Expert Political Judgment: How Good Is It? How Can We Know?
+[3] http://www.researchgate.net/…/235767787_Election_candidates…
+
+** Be Retrospective, Thoughtful
+*** Life Lessons
+**** Jen Shainess
+***** Don't let individuals affect your life decision
+***** Don't let people influence how you think about yourself
+***** Be well rounded
+***** be more proactive
+***** Listen to people who have knowledge
+***** Follow the traits of successful people
+***** Find environments (niche) where your traits will be recognized
+
+**** Don't ask permission for everything
+**** People are wrong more often than we think
+Don't let perception rule your actions
+**** The people around you change you
+**** People have families, and if you hurt them you hurt their families
+**** It doesn't matter who's right, only that the right answer outs
+**** Criticize by Questioning, not Advising
+The best way to criticism is not to criticise. Criticizing is a way to
+get straight to the point. It is done between friends. Before this
+trust exists, don't assume you know what they know (until you would
+both be comfortable agreeing this mutual understanding of each others'
+knowledge exists). Instead, ask questions which attempt to understand
+why others do things a certain way. Without asserting yourself, this
+will demonstrate what you know and you will benefit from hearing about
+the experiences driving their decisions.
+
+**** Give it 5 minutes
+**** Organize your life as early as possible
+
+***** Things I organize
 1. My file system
 2. My daily, weekly, montly, and yearly goals
 3. My thoughts -- via commonbooks
 4. Reading lists
 
-** Research people before meetings
+**** The power of effort, up-front -- Research people before meetings
 Find out who they know (know who you want to be introduced to)
 
-** Marginal Gains and Compound Interest
+**** Marginal Gains and Compound Interest
 
 http://jamesclear.com/marginal-gains
 
-** Etc
+**** Etc
 2. All things come to an end. Some people have trouble allowing
    themselves to enjoy things because they think about / can imagine
    them ending. Take anime for example. If you're on episode 26 out of
@@ -203,53 +1608,492 @@ http://jamesclear.com/marginal-gains
    worry about them later, let them pile up, or more importantly so
    you don't forget. Spacial and temporal locality.
 
-* GCC
-** Mtg w/ Drew
-All watched over by machines of love and grace - Richard Brautigan (poem; Machines of Love and Grace)
+*** The Re-Discovered Importance of Practicing Fundamentals
+My brain's hard-wired state of being has had me convinced me for a
+while that systems like Khan Academy are important and useful, but
+especially since Khan is geared toward more elementary learning, I had
+discounted it as a tool for myself. I decided to challenge this
+assumption and, in turn, was awakened to a truly important reminder
+(which should be common sense, but which I as a human so frequently
+brainwash myself to neglect):
 
-*** Seeking 1% Self-Improvements:
-One should spend their first 20 years learning about their lifestyles (or perhaps a computer should do this and learn your objectives based on your actions).
-- How long should I sleep?
-- When do I work best?
-- Where are my biggest distractions? Where am I genuinely wasting time?
-- How do I procrastinate better; more productively or efficiently?
-- Which relationship are helping me live most healthfully? 
+Hubris. The degree to which hubris prevents me, and likely you, from
+staying up to date with important, no critical, fundamentals of our
+education. I'm talking about arithmetic, algebra, pre-calc/trig,
+probability, geometry, linear algebra ... all the way to more
+challenging topics like differential, integral and multivariate
+calculus and diffeqs -- axiomatic tools for measuring, understanding,
+and conceptualizing the world. In the past, labeling topics like
+arithmetic or algebra as easy has prevented me from sufficiently
+practicing them. But I was in middle school when I learned algebra. I
+don't think I had the attention/discipline or the faculties to absorb
+the material as well as it deserved. I have had so much faith "I can
+learn it again quickly when I need it" that I have not invested the
+time to stay sharp: the quality of being so well versed in a subject
+you can instantly infer insights intuitively without having to divert
+or dilute your attention.
 
-*** Curating and Maintaining Community
-(the world needs to specify functions and definitions for this general concept)
-- How much effort is needed by experts to maintain quality per user added to the network (this is likely not be linear)
- -- This is different than per contributor added (noam)
+Learning isn't binary. It's a continuous process. I also discovered
+the degree to which I treat learning topics as binary (I either know
+them / have learned them before, or I do not know them). There's also
+the tricky and very dangerous conflation of knowing something versus
+knowing "of" something (we as humans often blur the lines here and
+even fool ourselves into knowing things we don't, simply because we
+can convince others we know them -- a fundamental which perpetuates
+the general problem of which I speak). But I'll save this for a
+different essay.
 
-*** Web of Trust
-(the world needs to specify functions and definitions for this general concept)
-It's an optimization problem between:
-who to let in your network and
-what type of content you want.
-Consideration: You don't want to miss out on good content but you also want to right content.
+You don't know what you don't know and you don't know what you
+forget. Not only is learning not binary, but it is not persistent
+(rather, it's transient). I'll let you explore the research on this
+point for yourself:
+http://www.spring.org.uk/…/how-quickly-we-forget-transience…
 
-Prerequisite: Requires people must first determine their goals.
+Staying relevant. I recently spoke to my sister Jen Shainess who is an
+elementary school educator in Cambridge, MA, and I was pretty
+surprised by some of the new / alternate strategies which are now
+being used to teach elementary mathematics. It reminds me of what I'll
+call the Tenure Paradox (there's probably a better name for it). The
+stigma questioning how a professor who has been in academia for 20
+years is able to teach the latest / most relevant content to
+students. Chances are, their thesis entailed techniques which are now
+outdated. The only answer is to stay relevant, and that means
+constantly relearning your field -- not just the delta of new topics
+introduced but from ground up, if need be, as new breakthroughs
+arise. In this respect, each new generation does have a significant
+advantage of skipping directly to the obtainment of these important
+conclusions without having to go through a re-integrated learning
+process. However, I claim these intermediary learnings are undervalued
+in our society and that these processes (failed or otherwise) by which
+those important conclusions were obtained are the most necessary
+prerequisite for being able to repeatedly obtain future conclusions.
 
-*** Automating Knowledge Recommendations
-A recommender system which recommends content based on the entirety of your knowledge: optimizes for greatest entropy / opportunity to learn / fill gaps and fulfillment. It should also be forward looking and consider future knowledge (planning). This requires some degree of infrastructure and informed taxonomy / ontological organization.
+Why it pays to re-visit and re-learn. Not every breakthrough is an
+addition to our existing knowledge base. Some axiomatically change the
+whole structure of fields, like the discovery of gravity, of
+integrals, of geometry, or more recently, of deep learning as an
+alternative away from features-by-hand. From an algorithmic
+perspective, not only can new features and axioms be introduced, but
+we discover more algorithmically efficient (in terms of big O
+complexity or implementation complexity) ways of accomplishing them.
 
-*** On Improving Notification Systems
-Planning for an event is not enough, it needs priorty levels + feedback
+Re-integration. This notion of continuously analyzing and evaluating
+your personal knowledge graph is called (re-)enforced or
+(re-)integrated learning. It is applied within scientific contexts,
+such as Six Sigma, as Continuous Improvement of Processes and in
+artificial intelligence / machine learning as reinforcement learning.
 
-Calendars + push notifications lack priority / frequency ()
-There is an 83% chance you will miss this meeting
-Feedback loops
+It's a personal roadblock. I want to reach a state in my life where I
+can open up a wikipedia page and gain a good intuition about complex
+mathematical topics or research papers. Right now it takes me far too
+long.
 
-*** Idiot - Archive + Entity Resolve every idea
-See whose interested in a problem / solution.
-See how closely ideas overlap in requirements or impact 
-Compare effectiveness of solutions
+For these reasons, I intend to continue using Khan Academy, and
+investing time every day into learning not only new topics (Artificial
+Intelligence, Chinese, Computer Science, Math), but also the
+fundamentals.
+*** Musical Mastery
+My personal definition of becoming a professional, to become a truly
+versatile expert, is to invest enough time and learn enough about
+one's industry in order to truly know what's possible to do with the
+language.
 
-*** To Read
-- continuity of parks
+For music, this means learning how to read music, more than one
+instrument, vocals, lyrics, writing music, music theory.
 
-* How do I think?
+Imagine the disadvantages faced by a poet who could not read or write,
+who could explain what they know only through a single language, a
+single interpretation. Perhaps their one interpretation is very deep
+and resonates with many people, but it also prevents, or rather
+limits, them from translating their ideas and feelings and making them
+universal, cross-cultural, universal, and timeless.
 
-** Should others think differently?
+This doesn't mean someone who only sings isn't a good musician. It
+just means that the learnings and skills one can achieve through such
+cross-pollination can potentially allow or prepare them to achieve
+even greater heights, with greater speed.
+
+How much faster the car was made after the assembly line. How much
+sweeter the sound whose fundamentals had been tuned and justified by
+music theory and intimate understanding of harmonic overtones.
+
+Mastery, in my opinion, is being able to apply, transfer, and convert
+learnings from one discipline seamlessly to another. The ability to
+perpetually adapt and grow, of never being limited or restricted by a
+single medium.
+
+This is why I have such a hard time admiring rap. Not because rappers
+can't be talented or because rap doesn't require talent -- it does.
+Perhaps I simply fail to recognize and appreciate the poetry and
+entertainment qualities in rap and consider these its primary value
+propositions. Perhaps I unfairly classify rap as music and hold it
+to unfair standards.
+
+Or perhaps it is a personal issue and bias, that I become discouraged
+when artists blend mediums (music and presentation), though this is
+exactly what now I recommend they do, because I, the uneducated
+interpreter, lose the ability to assess their value.
+
+I have a very specific definition of music. It's something I hear.
+When there's a song I really love as a song, I do not like for it to
+be "diluted" with visuals or performance. I often find it exceedingly
+difficult for me to separate rap from the person who's performing, and
+to enjoy it by itself.
+
+My general mentality is, I can take an accomplished musician, like
+Paul Simon, and he is able to both write great lyrics and rap
+(http://youtu.be/kDxQr-s26t8?t=3m44s). However how many rappers can
+sing or compose music like Paul Simon? In fact, how many rappers even
+write their own samples? Some don't even write their own lyrics.
+
+Some rappers, like Ryan Leslie, can sing, write, and plays all the
+instruments in his tracks. 
+
+Coincidentally, he also got a degree from Harvard and, while there,
+did a cappella with Krokodiloes. I find it a lot easier to appreciate
+rap when I can sense the intention and work behind it; the phrasing
+and timing, the diction, the rhyming.
+
+http://www.youtube.com/watch?v=c_T7HgZKZjo
+*** Progress for the sake of progress, is Progress
+TODO: Add Euclid quote about fetching coin for student who needs earn
+from their efforts
+
+TODO: Discuss relationship between politics v. progress (why fear
+shouldn't stint progress)
+
+I actively make an effort to avoid thinking systems are inherently
+evil, even if perhaps there does exist what we perceive to be strong
+empirical/anecdotal evidence in history for showing one system to be
+"worse" or more "exploitable" than another. Systems are just universes
+of discourse with parameters. They provide rules, generalizations,
+boundaries, and a means through which to communicate ideals. Depending
+on the way they are structured, they can introduce friction or
+deter/encourage specific behaviors, but at the end of the day, in my
+(skewed and likely flawed) opinion, people (actors) and conditions
+(environments) play a determining role in the outcome of such system.
+
+People come from different walks of life, economically,
+culturally/socially, academically. We all face differing constraints,
+circumstances. Some of us have it "easier" than others. I am likely
+one of them. Someone can be born brilliant and with unparalleled
+aptitude and, due to circumstances of their birth (geography, economic
+endowment, an abusive family, oppression/war, etc) may by chance never
+have the opportunity to explore/use it. And this and other such cases
+are our losses as a people -- something which I certainly don't pay
+the attention it deserves.
+
+However, life is stochastic and people opportunistic. Someone with a
+below average IQ is unlikely to abstain from having a child on their
+own accord, in consideration of raising the world's average IQ. Nor
+will every millionaire donate 10k to stop world hunger. People have
+different, not uncommonly conflicting, motivations. And where one is
+insufficient for accomplishing one's own goals, there becomes two, or
+two thousand. Or in the construct that is Facebook, 700+ million
+(given dupes + in-actives).
+
+Structures, organizations, and societal constructs, like economies,
+governments, or corporations, are what help us as individuals overcome
+hedge these differences, generally to the collective benefit of
+... well, some subset of people. Sometimes this works to our
+advantage. We've build roads, interactive maps, space shuttles, gps,
+voice recognition -- and there likely isn't a individual (irrespective
+of intelligence) capable of fully recreating these systems in their
+lifetime.
+
+There's always going to be inequity in the world, if for no other
+reason than we as a people are statistically and probabilistically
+astronomically unlikely to converge on a mutually agreeable definition
+(or interpretation, for that matter) of what is equitable -- to be
+honest, I'm sure there are people who won't even agree with that
+statement (que sera, sera).
+
+Instead of worrying about how to fix inequality, I like to explore
+ways of deprecating it into obsolescence. Software is an interesting
+(but not perfect) example. Benevolent dictatorships are not uncommon
+within a software project and are occasionally even more successful
+than their democratized rivals (GNU/Linux, for instance). As we
+continue to increase our connectedness, learnings, and accomplishments
+as a people, we will inevitably provide more avenues for people to
+achieve better qualities of life.
+
+TL;DR -- Crazy people will still be crazy. Murderers will still be
+murderers. But at least we'll be complaining about the missing cheese
+from our cheeseburger rather than the missing roof over our heads.
+*** Making Friends
+TL;DR on finding friends:
+Friendships grow and they have to grow from/on/through something.
+1) Love work, then meet with people at work to learn from
+2) Find friends through successful/healthy procrastination (gym, reading group, game night, hikes, music, art)
+3) Through academic learning (perhaps through work, or arrange activities with people you discover wish to learn similar things)
+4) Through "dampers" (see below; people you already trust who expose you to new things/people)
+
+I have a different challenge: finding people I enjoy spending time with. I psychologically have a hard time escaping a "work" mindset because I have compulsively crafted my life around learning and applying knowledge. I also have little patience for people who I feel lack ambition, don't push me, and question why things are. Arguably, this is a character flaw of mine and something I should work on -- at the same time I am not sure I want to compromise my ideals (unless a person shows me how wonderful their qualities are that I am forced to make an exception -- these are often my favourite friends). Life is short and we become more like those we spend out time with, thus I treat the process seriously. Perhaps some may call this being too risk adverse. I actually think it's the opposite: after all, it's essentially a general comparison of a depth first (my strategy) versus breadth first search (having no filter), and my strategy is proven to be mathematically incomplete (although I may actually suggest my search is more of an A*).
+
+One thing I have learned is, to be successful at hitting goals, you need to also be successful at effective (yes, there is such a thing) procrastination (i.e. unwinding). It's in these types of healthy, unwinding activities I often find meaningful friendships.
+
+Also, make sure you genuinely love what you do and ask people for help when you need it. It's much easier finding friends when you love your work; i.e. work is not work but life itself. Most of the people I meet with for coffee during work hours are extremely inspiring as they are solving problems I so deeply care about (it's and incredible vicarious feeling) -- each one in some way teaches me something and I end up considering some degree of a mentor.
+
+Here are the places / activities where I find myself meeting people:
+1) Noisebridge Hackerspace
+2) Rock Climbing @ Mission Cliffs Indoor Rock Climbing Gym
+3) Five Minutes of Shame (Hackerquarters bi-monthly event)
+4) Mentors @ coffee shops. (stanza, fourbarrel, sightglass, cafe centro)
+5) The MoMa (which is now defunct)
+7) Mellow Beats & Board Games
+8) Damping Factors (see below)
+
+Damping factors. Some of the important people I associate with are like damping factors (see explanation as it pertains to PageRank algorithm) [1]. Dampers are good for introducing stochasticism into your life (as if we really need more!). I choose these types of friends because I fundamentally respect them and their abilities and thus know I will enjoy their company even in different (read: strange) scenarios, even if I would not otherwise enjoy the type of event they encourage me to participate in. This is also a good way to explore edges along your friends graph and meet new people.
+
+[1] http://homepages.ius.edu/.../html/notes/Chapter22/BFS.htm
+[2] https://en.wikipedia.org/wiki/PageRank#Damping_factor
+** Be a Hacker
+** Be Meta, Reflective, Curious, Inquisitive
+*** The Perception of Realities
+
+Reality is the conjectured state of things as they actually exist,
+rather than as they may appear or might be imagined. [1]
+
+Namely, there are two types of reality. I independently came up with
+the terms Social and Material reality to serve this
+distinction. Ironically, Franz Jakubowski [2]
+(http://en.wikipedia.org/wiki/Franz_Jakubowski), Schütz, et al [3]
+came up with nearly identical distinctions 100 before (ideal
+v. material reality and social reality). Given they spent a lot longer
+thinking about this problem than I have, I am going to concede to
+their terminology.
+
+Assumptions
+1. Our universe has not been fully observed
+2. Our universe is not fully understood
+3. Within reality, there are systems which are (for now) of known computable probability distribution
+
+[1] Compact Oxford English Dictionary of Current English, Oxford University Press, 2005
+[3] http://en.wikipedia.org/wiki/Franz_Jakubowski
+[3] http://en.wikipedia.org/wiki/Social_reality
+[4] http://en.wikipedia.org/wiki/Occam's_razor
+[5] http://en.wikipedia.org/wiki/Solomonoff's_theory_of_inductive_inference
+[6] https://en.wikipedia.org/wiki/M%C3%BCnchhausen_trilemma
+
+**** Why is the World Broken?
+
+Occam's Razor (Ockham's razor; William of Ockham [3]) -- or more
+formally Solomonoff's theory of inductive inference [4] -- demonstrates among other
+things 
+
+
+
+ there's only one way to be right and a nearly
+infinite number of ways to be incorrect.
+
+When we discover a new theory, we're presuming every
+assumption and axiom it relies on is also sound. Münchhausen's
+trilemma [6] presents an interesting perspective on the challenges of achieving
+such "truths".
+
+It's also easy 
+http://math.stackexchange.com/questions/820686/obvious-theorems-that-are-actually-false
+
+
+The world really is broken. But this is because we don't really
+understand it. And if we think we do, Occam's razor should likely
+convince us otherwise.
+
+See the Blub Paradox (http://www.paulgraham.com/avg.html)
+
+
+
+And will remain broken, by definition, so long as our
+observations and methods are insufficient to achieve
+deterministic understanding.
+
+Given that the number of bits required 
+
+There is a difference between the existence of moral truth and ab
+
+In the same way that statistics offer us 
+
+
+The Žižek trilemma
+
+In order for "moral truth" to have practical meaning, holistic and perfect understanding of others.
+
+- continuously updated, shared knowledge base
+- equal ability to process and interpret said knowledge base
+
+
+
+
+Occam's razor would likeyl suggest the world is as broken as our
+understanding of it. Or rather than it is broken because our
+understanding of it.
+
+That is to say, it is binary whether the universe has a purpose or
+not.
+
+
+We live within a context we don't fully understand and thus have no
+way to verify how our system does or is supposed to work. This is a
+problem because it exposes our inability to fully control the which
+are important to us.
+
+It's challenging to quantify "the" problem, suffice to say there is
+one. Our interpretations of this context is, perhaps, part of the
+problem.
+
+
+Life is a constant struggle to persist knowledge. How many hard drives
+have failed, libraries have burned, years of progress have been
+reverted? That our efforts keep building up these corpuses 
+
+
+**** Ideal and Social Reality
+
+As far as most of us are concerned, there's one reality that matters:
+ours (i.e. individual cognitive reality [2]). We acknowledge others
+are no different than us, in that they similarly experience an
+individual reality. We thus accommodate each others' realities to
+reinforce our own, enabling us to mitigate confrontation, refine our
+beliefs, and exploit the shared/mutual beliefs and accomplishments of
+others.
+
+The resulting network of ideas and ideals, this aggregation of all
+societies individual cognitive realities, is sometimes referred to as
+an accumulative Social Reality [2]. This definition of reality
+manifests as our shared perception. It is an understanding of the
+world shaped by social interactions, emotion, advertising, politics,
+among other things.
+
+For some, social reality is the only context worth acknowledging and
+these individuals will fight to preserve their "individuality", their
+"privacy", and their "competitive advantages". However, beyond the
+confines of our contrived, disparate social realities lies a bigger
+context. A universe of possibilities more meaningful than our shallow
+perceptions allow. It is the underlying system on which we base and
+derive all our truth, even those we contrive, and the framework
+which constrains or progress.
+
+***** Problems
+
+Reality is fundamentally broken and is heavily gamed to remain this
+way. The masses, afraid, unmotivated, or unequipt to push against
+the tide, strengthen its flow.
+
+When I say broken, I mean that our expectations have been violated or
+compromised; that the internal consistency of our system has been
+challenged or threatened. I mean Broken in the same way the algebraic
+or calculus proof demonstrating 2 =
+1.999... [http://en.wikipedia.org/wiki/0.999...].
+
+This deinition or sense of reality is fundamentally broken
+both in that it is incomplete and that we all experience it
+differently. How can we possibly consider the realities of those we
+have never met? Are they not part of reality?
+
+I imagine, for the many, the realities we choose to acknowledge are
+limited to the scope of our immediate surroundings and anything beyond
+this, we discount. E.g. global warming is a problem for a future
+generation. Some people never escape this short-sightedness; this
+inability to look outside their "little town", towards a holistic
+understanding of some bigger picture.
+
+This gap is filled by CNN, twitter, et al. It is wrought with error,
+misinterpretation, and selection bias, in (among other ways) the form
+of advertising.
+
+Herein lies a major source behind our dogma. Each of us has an agenda and
+are thus cautious of which reality we embrace and which reality we
+allow others to see / choose to proliferate. This decision process is
+often done without respect of (and sometimes with direct disregard to)
+overwhelming evidence on the topic.
+
+Some connive or deceive in order to protect their image; to avoid
+appearing abnormal or rather to preserve their golden image. Some do
+so to gain control of others, to appear attractive, or to ensure their
+fortunes. But in each case, the individual prioritizes their immediate
+well being over challenges which may impact the masses. These are the
+people who monopolize knowledge, who file patents, and close the
+source to their software and hardware.
+
+It is the brave few who look past this social reality and challenge
+us. Those who pose the world is flat, that the earth is not the center
+of the universe. Those few who devote themselves to academia, who poke
+holes in our assumptions and theories and compel us to alter our
+perceptions of reality. Seekers of a truth deeper than social
+perception.
+
+But society often rejects these people and their ideas, until their
+merits become so compelling that they can no longer be controlled with
+propoganda and ignored; Alan Turing, Nichola Tesla, Galileo,
+Pythagoras, and Marie Curie.
+
+
+**** Material Reality
+
+With science and mathematics, we often construct controlled systems to
+test hypothesis. Through these controlled systems, we are able to
+separate concerns, reduce complexity, and deconvolute and deconflate
+variables. The result is greater understanding of how variables act
+independently, as well as relate and impact each other (i.e. their
+functional dependencies).
+
+***** Problems
+
+But the world we live, what we call reality, is in much more complex
+than these artificially constructed, simplified sandboxes.
+
+There's the additional argument that these sandboxes are themselves
+run within our reality (and thus impacted by stochasticism we can't
+fully understand and appreciate).
+
+
+**** Social Reality v. Material Reality
+
+|   | Social Reality | Material Reality |
+|---+----------------+------------------|
+|   | Empheral       |                  |
+|   |                |                  |
+|---+----------------+------------------|
+
+**** Hmm
+
+But this isn't why reality is broken. Reality is broken because of us;
+people who make it that way and want it that way.
+
+Dogmatism: People are afraid to admit some problems haven't been solved. They cling
+
+standardization:
+divergence
+
+ We feel accountability because we are dogmatic. We feel
+obligated to preserve our beliefs and those who mutually embrace them.
+
+
+**** Towards Universal Reality
+
+Working towards achieving this aligned reality enables us to make more
+educated, respectful decisions.
+
+The answer lies with technology and deeper communication -- with the
+possibility of a distributed, shared reality everyone can understand
+and independently validate. The Internet holds great promise as a
+medium for connecting and communicating knowledge in a way which
+enables everyone to participate and collaborate. The HTTP RFC,
+Wikipedia, Wolfram Alpha, Google Maps (Scholar and Finance), The
+Internet Archive, Gitub, and Coursera are great early efforts towards
+democratizing access to high quality data.
+
+That such great margins exist to objectively improve
+quality of life; to reduce poverty, increase accessibility to
+knowledge, and thoughtfully reconcile conflicting views.
+
+That we might spend less time engrossed in trivia, acting selfishly,
+inhibited by defensive dogma, and misled by jealousy, and instead
+spend more time understanding which problems are worth solving and
+which people are worth assisting.
+
+*** How do I think?
+**** Should others think differently?
 It's wonderful there's such diversity within peoples' thoughts and
 life philosophies. Some living for today, for nobel causes in 3rd
 world countries, to get rich, to find love. It's reassuring in the
@@ -260,7 +2104,7 @@ the correctness of my ideals. Perhaps I should think differently and I
 look forward to shaping my direction as new information becomes
 available and circumstances emerge.
 
-** As a single thread, even when weaved between others
+**** As a single thread, even when weaved between others
 That doesn't mean it isn't lonely, feeling like a single thread
 weaving an path through a tapestry whose composition we don't fully
 understand and cannot fully observe. I want to understand this
@@ -293,7 +2137,7 @@ towards an internally consistent and accessible world. This is the
 world I strive to see realized, though I know it is not to be achieved
 in my lifetime.
 
-** On choosing a philosophy
+**** On choosing a philosophy
 Choosing a life philosophy is challenging, especially without first
 setting a context. For many, I would guess their context is around 150
 years; approaching the upper bound of one's life and their usefullness
@@ -311,7 +2155,7 @@ lives improved because of them? And, I'd be remiss if I did not also
 consider, in which ways have they become worse? On this I am not
 prepared to answer.
 
-** Sacrifice; The consequences of my decision
+**** Sacrifice; The consequences of my decision
 Having a contextual window of 3 millennia has consequences. It means
 that my actions do not optimize for the those living around me. Their
 window only practically represents 1/20th of mine.
@@ -332,7 +2176,7 @@ towards these goals.
   spend as much time as possible focusing on problems I feel are more
   important.
 
-** Fear of missing out
+**** Fear of missing out
 Our number of seconds in this world are perpetually diminishing. Every
 moment we deviate from our objective is a moment we lose forever. It's
 painful knowing we need to rest and take breaks. At the same time,
@@ -353,75 +2197,114 @@ path. Sometimes I wish to dissapear in a different country and lose
 contact with anyone important to me. Sometimes I consider prioritizing
 happiness.
 
-*** Growth versus execution
+**** Growth versus execution
 Balancing growth and execution is one of my biggest presonal
 challenges. Recently I've felt pressure to prioritize execution over
 learning and I have great fear this strategy will work against me (in
 terms of the absence of compound interest of my knowledge) in the
 future.
 
-** A leap of faith
+**** A leap of faith
 I believe that (1) striving to create a universal knowledge base, (2)
 working towards discovering and eliminating inconsistencies, and (3)
 making this knowledge base accessible, are the root of progress and
 advancement.
 
-* Reading List
+*** Is certain creativity dangerous?
+The words "just" (etymology: via Old French from Latin justus, from
+jus ‘law, right.’), "merely" (etymology: from Latin merus, ‘of wine’,
+‘unmixed’ -- antonymous to Promiscus Promiscuus), and "literally"
+(etymology: littera, "letter", litteralis "of a translation") have
+been perpetuated into diluted, hyperbolic statements which show
+disregard for the rigor and specificity under which they were formed.
 
-** continuity of parks
+I'll likely look back and find this aforementioned claim naive and
+ironic -- I am creating a commentary on the dangers of
+creativity. I'll document my reasoning for the sake of provenance.
+** Be Ambitious
+*** Business Ideas
+**** Baybo
+**** Sendr
+https://github.com/mekarpeles/sendr
+https://github.com/pagekite/Mailpile - An experimental indexing and search engine for e-mail
+**** Hackerlist
+**** LifeSupport
+Your digital self: secure, organized dropbox for specific verticals:
+storing health records, genetics. Setup notifications in case of an
+emergency (contact your doctor, email your contacts). An encrypted
+server which stores your health (or other) records in the event of an
+emergency.
 
-* Business Ideas
-** Baybo
-** Sendr
-** Hackerlist
-** LifeSupport
-** Thebestbookon.com
+**** Thebestbookon.com
 
+Goal driven book selection
 bests book on topics, endorsed and verified by leading experts
 
-*** Problems
+***** Problems
 1. If you're not an expert in X, how do you find the best book on X?
 2. There are too many books to read, you can't read them all
 3. People want to know the fastest way to learn
+4. Book selection is not outcome driven; what are your goals?
 
-*** Solutions / Competitors
+***** Solutions / Competitors
 http://whatshouldireadnext.com/
 
-*** More Problems
+***** More Problems
 
-*** Verticals (+ justification)
-**** High School
-**** Languages
-***** Chinese
-***** German
-**** Graduate Topics
+***** Verticals (+ justification)
+****** High School
+****** Languages
+******* Chinese
+******* German
+****** Graduate Topics
 
-**** Best Translations
-*** How
+****** Best Translations
+***** How
 - only phds/experts can comment
 - Technical books via irc
 
-*** Milestones
-**** M1. MVP, Search/Discovery Engine
-***** Domains
-***** Monetization
+***** Milestones
+****** M1. MVP, Search/Discovery Engine
+******* Domains
+******* Monetization
 1. Affiliate Links (amazon)
 
-**** M2. Marketplace
-***** Monetization
+****** M2. Marketplace
+******* Monetization
 Marketplace on thebestbookon.com
 
-**** M3. Syllabuses
-***** How to learn x (sequence of books)
+****** M3. Syllabuses
+******* How to learn x (sequence of books)
 The best sequence / syllabus on X
 - mashups of content
 - sell sylabi?
 
-**** M4. Annotations
+****** M4. Annotations
 
-*** Virality
+***** Virality
 - Promote Bloggers, split affiliate fee
 - Login with facebook, send books to friends (learn who likes what)
 - Every purchase can be sent to 2 friends for free
 -- every additional friend is 25% off, you earn 25%
 
+**** Provenance
+provenance - This tool is a way to quickly, selectively preserve
+and make re-accessible the knowledge and search history of every
+individual, and to both share and receive highlights with others
+**** consecure
+a mobile application which allows you to manage various contexts
+(work, home, etc). Programs are installed within the container
+environment with a specific set of permissions (2-factor, etc). It's
+like having a separate, secure, contained user/environment. Manages
+contexts apps run in, prevents man in the middle, etc.
+
+**** lifesaver
+
+** Be Supportive, Philanthropic
+I need to support the people who are meaningful to me.
+I need to support people who can create a better world.
+*** Drew's Paper on Zooming
+*** Andrew's Gigit
+*** Jessy's JTag Controllers
+** Be Observant, Logical, Reasonable, Analytical, Analogical
+*** How making life decisions can be informed Computer Science (algos)

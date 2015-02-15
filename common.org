@@ -534,6 +534,36 @@ funny a joke was perceived to be.
 
 Enjoy the full article @ http://www.wired.com/magazine/2011/04/ff_humorcode
 
+**** Jessy & Drew's Parser Project
+For anyone who hasn't taken a Programming Languages or Compiler course (or who hasn't written a parser), it's worth knowing *what* parsers are why what Jessy is doing is cool.
+
+Why should you care about parsers? They are the backbone and pre-requisites to nearly every important computer system we use (compilers, search engines, bioinformatics & gene sequencing, map systems, spell-checkers, translators).
+
+Parsers, in one sentence, are what takes the text we type or enter, and, using rules it defines, turns it into pieces of data the computer understands. Compilers are similar (as they are built using parsers) in that they determine/decide what happens with this data, once the computer understands it.
+
+Parsers, by themselves, are useful in any case where one wants to invent their own pattern, or way of representing information. Computer scientists call these specific patterns and their syntax Domain Specific Languages (DSLs). The concept is a lot more intuitive and accessible than you might think:
+
+Acronyms, for example,are a type of DSL. It involves taking a long, complex, or difficult to say word and using its letters (or similar sounding letters) to shorten it.  Each academic *domain* uses their own system of abbreviations to simplify complicated terms -- like deoxyribonucleic acid becoming DNA. Or for hipsters, LOL become "laughing out loud".  In fact... DSL is an acronym, and may at first seem overwhelming because we as humans have to parse the acronym into other terms we understand! Enough about DSLs, back to parsers:
+
+Parsers are special types of computer programs (software) which are responsible for:
+a) defining grammatical rules (like those used in natural language) b) lexing: reading in strings of raw text [1]
+c) tokenizing: identifying terms or clumps of characters in the text which are meaningful (such as a word or part of speech in English)
+d) parsing: applying its rules from (a) to each word/token to derive meaning between their relationship or semantics of each word (like a group of words/tokens being a correct/valid English sentence).
+
+You can probably imagine a programmer using a parser to create a limited version of the English language which reads in English sentences (maybe it reads your email) and determines/tags the part-of-speech for each word. This isn't too different from how spell-checkers and equivalent tools work.
+
+If you've made it this far, you may want to jump deeper and learn how parsers work and how they are used. Parsers have *strategies* and *implementations*. A strategy describes how parsing is actually performed. Think of it like strategies for reading -- some cultures read left-right, like English. Some right-to-left, like Hebrew, some top to bottom, like traditional Chinese.
+
+An implementation is how a parser's capabilities are exposed to a programmer (usually as a library or API for a specific programming language. For those interested, in Jessy's case, ANTLR is the implementation and LL(*) is the parsing strategy.
+
+LL(*) describes a strategy for how the computer program (parser) reads and analyzes each symbol. Suffice to say, there are many different strategies... LALR, LL, LR, SLR, 
+
+We use parsing every day. Imagine receiving an email with the text (computer scientists call this a "string" of text, because each character is strung together, almost like one of those candy necklaces) 
+
+At a high level, the difference between LL parsing and LR parsing is that LL parsers begin at the start symbol and try to apply productions to arrive at the target string, whereas LR parsers begin at the target string and try to arrive back at the start symbol.
+
+[1] For CS majors (I am using parsers to mean both parser and lexer, given in many implementations, parsers also implement lexical analysis).
+
 ** Be Expressive
 *** Raps
 **** Dolls

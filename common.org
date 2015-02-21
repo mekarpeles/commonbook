@@ -1,5 +1,30 @@
 * Axioms
 Be principled:
+** Be Resourceful
+1. [[https://docs.google.com/spreadsheets/d/1k-zl-Ya4OAU7Lp8DsPGy7mSJVCeXSPqK673Wiq8ndt8/edit#gid=0][Quantified Self]]
+2. [[https://delicious.com/mek][Bookmarks]]
+
+** Be Organized
+*** Movie Recommendations
+1) http://www.jinni.com/ (went defunct, relaunched) [S]
+2) https://movielens.org/ (U of MN created as recsys experiment) [S]
+3) http://foundd.com/ [S]
+4) http://www.tastekid.com/
+5) http://www.metacritic.com/ -- haven't tried
+[S] denotes storage of seen
+
+2 really has the most information and coverage (amazing database) but
+I don't find the recsys very valuable. It also allows you to download
+your data.
+
+I've rated ~1000 on FOUNDD (sadly I've watched 1,000) and it does
+recommend some good stuff (which I have yet to see). Unfortunately,
+the coverage isn't great, it's hard to see what you've rated, etc.
+
+Jinni is the hipster, mainstream solution. It feels like shopping
+netflix. This happens to mean it offers the most useful way to
+discover and browse. Recommendations are so, so. Hard to discover NEW
+media.
 ** Be Humble, Honest, Scholastic
 *** Ignorance
 Or documenting and rectifying my ignorance, as best I can:
@@ -17,6 +42,7 @@ Or documenting and rectifying my ignorance, as best I can:
 ***** Why? 
 Because it was mentioned by Richard Feynman (https://www.youtube.com/watch?v=FjHJ7FmV0M4) as he 
 described how light exists and propogates (asserting that they are not flowing vectors
+*** Mistakes
 *** My flaws
 *** Fool me once
 **** SQLAlchemy UnicodeDecodeError
@@ -52,6 +78,65 @@ https://docs.google.com/spreadsheets/d/1k-zl-Ya4OAU7Lp8DsPGy7mSJVCeXSPqK673Wiq8n
 starting state, keep track of what you know
 - expose your knowledge base / graph + state of knowledge via API
 - obtain universal graph of knowledge gaps, inconsistencies
+****** On Protocols and Sandboxes
+What would your idea world look like if you could build your own
+sandbox(es); [a] subset(s) of our world restricted to/by concrete
+rules, limitations, and community members, formats?
+
+Hint: you can.
+- [programming|natural] languages
+- [wikipedia|stackoverflow|irc|github|quora|fb|reddit|([0-9a-z]*)chans]-like communities
+- Universities
+- Religions
+- Corporations
+- Publishing
+
+Personally, I enjoy brainstorming epistemology systems (not unlike
+wikipedia, freebase, and wolfram alpha) which aim to formalizes and
+relate all forms / instances of knowledge quasi bella fugientes
+metamathematics. If APIs for connecting such resources were
+standardized, first-order citizens to HTTP (read: adopted protocols,
+implemented by all services and/or browsers), the web would become a
+"unix shell" of glorious asynchronous piping and distributed analysis
+of information.
+
+A powerful principle I often neglect in the design or consideration of
+such sandboxes is the importance of Protocol design (TCP/IP -> HTTP ->
+RSS), and how critical they can be (i.e. intimately tied to the
+lasting success) to the service (and other future services like
+it). w3c RDF and PROV are two protocols which (if adopted, mainstream)
+will make it much easier for me to create the types of sandboxes I
+want to see. A sentiment/mindset (protocol research) worth exploring
+to those interested in shaping their own little corner of this
+universe.
+
+While I appreciate "the web" offers a creative outlet for people to
+say (and convince people of) pretty much whatever thing they want,
+even before they think it, I dream of a sandbox of knowledge which is
+axiomatically provable from ground up. Able to quantifiably show
+points of inconsistency or contention between ideas or disciplines,
+identify and possible resolve/merge duplicate knowledge. I basically
+mean Wikipedia (if the language was less "natural" (read human;
+english) and more meta-mathematical (some DSL; domain specific
+language)). Freebase is even closed but it fails (for me) to be a
+service whose data is integral to the problems I care about.
+
+Which is selfish. But I want to see the a place where the world's
+knowledge (with concrete rules for what constitutes knowledge and its
+types) is laid out in a universal graph I can zoom/travel through. I
+want to know what topics I know, and how well. Similarly, what other
+people know and how well. I want I want to know which resources or
+authorities know topics best, objectively (coverage, comprehension,
+based on demonstration or achievement). I want to test run assertions
+against the knowledge base and get a % confidence of how right it is,
+or learn what other knowledge would be invalidated if this knowledge
+were correct. I want to be able to participate in a global initiative,
+a global conversation and single thread of consciousness and
+understanding, to further knowledge. I cringe when I imagine what
+minuscule percent of the "knowledge" we, as people, proliferate,
+believing it would pass axiomatic validation / rigorously
+challenge. And how many policies / propaganda / arguments /
+technologies / corollaries are drawn from these errant foundations.
 ***** Programming Languages
 1. Learn Haskell
 2. Learn Clojure
@@ -98,6 +183,11 @@ http://natureofcode.com/book/introduction/
 5. Build personal movie recsys
 
 *** Reading List
+**** Backlog
+1. Mathematics: Its Content, Methods and Meaning
+2. [[http://www.physixfan.com/wp-content/files/GEBen.pdf][Gödel, Escher, Bach]]
+How does a self come from things which have no self?
+
 **** Anthony DiFranco
 Why Nudge?: The Politics of Libertarian Paternalism (The Storrs Lectures Series)
 http://www.amazon.com/Why-Nudge-Politics-Libertarian-Paternalism/dp/0300197861
@@ -599,6 +689,57 @@ to say if they were transmittable --
 your pitiful weak spittle might too be
 passably admissible.
 
+**** Can't stop this rigor
+Back with the most algebraically abstract rap
+it be making your thoughts endomorphically contract
+
+Fractal with clever multi-sylabic alliteration
+Tactilely experiencing this poetic dissertation
+
+Publish another paper they call it a field shaper
+watch them cite it and ignite it like vapor-Ware, hype,
+cycle back, pop the stack, to the matter and hand,
+getting people excited is all part of the plan
+The other part of the plan is for you to understand
+the discovery of Zahlrings makes David Hilbert the man
+
+Fraenkel's mandatory multiplicative IDENTITY-of-1 makes sense to me,
+But Noether rejects any NEED for such an entity:
+
+So don't stop your rigor, 
+You might learn yourself
+
+don't stop this rigor,
+You might learn yourself
+
+We're getting smart with this niche
+We're crafting art, getting rich
+
+If you're lost, I'll drop some knowledge, and I'll give it to you gratis.
+This mathematical rap requires high-order functioning status.
+
+It's as simple as boolean algebra with Shannon's switching apparatuses,
+You can follow along if you get Heyting's semilattices.
+
+Just don't make me repeat myself, I haven't patience for antics
+so let's get right down to the denotational semantics.
+
+Your brain is trapt like a fixed point combinator.
+You're stuck at the bottom with the most common denominators.
+
+[Insert inspiration section on learning math]
+
+Dominating finite fields harder than the Patriots wannabes.
+4 rings? Big D, I have as many rings named after me.
+
+It isn't easy joining our Abelian group.
+First you gotta prove to Galois you have the roots,
+
+Math is just the start, things about to get meta, we're gonna launch
+these lucid lyrics right outa beta.
+
+Pickled, curried, salted, cookie clearing my cache,
+inspector detects localstore still referencing the hash
 *** Poetry
 **** Bark
 Regret is this rotten slab of wood, before my hands how tall you stood.
@@ -639,9 +780,6 @@ dark frost as my evening attire. It weighs upon me, more heavily my
 heart than my shoulders, but that I have accepted it, I cannot alone
 be the one to remove it. And so it became that it is not for the chill
 that I am cold.
-** Be Understanding, Respectful, Open-minded, Considerate
-I need to work on this.
-
 ** Be Provenant
 *** Browser Tabs
 **** Work
@@ -1073,6 +1211,7 @@ https://www.employiq.com/jobs/all/c-programming
 
 ****** Hackerquarters
 *** Daily Journals
+
 **** Learning Chinese
 ***** Learning, in general
 
@@ -1286,8 +1425,14 @@ faster.
 ***** What to read
 https://en.wikipedia.org/wiki/Four_Books_and_Five_Classics
 
+
+***** Dailies
+2015-02-15 Sun
+
 **** Learning Music
 **** Learning Math
+
+**** Learning AI/ML
 
 *** The Browser Graph
 Objective: Browser extension, passively record all links visited (and
@@ -1373,21 +1518,87 @@ http://www.orrick.com/Practices/Emerging-Companies/Startup-Forms/Pages/Forms-Fou
 [UNREAD] http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial
 [DATASET] https://www.kaggle.com/c/facebook-recruiting-iii-keyword-extraction/data
 
-** Be Accountable & Just
+** Be Accountable, Fair & Just
 Every time I read a link (or at least for some class / category of
 resource) I should need to write a sentence as to why I am visiting
 the link, what it accomplishes. This friction is necessary.
-
 ^ PROVE IT. (document or it didn't happen)
+*** Sexism
+**** Academic Discrimination
+http://fortune.com/2015/02/17/a-female-computer-science-major-at-stanford-floored-by-the-sexism/
 
+Keeping time in perspective. Women didn't have the right to vote in the US until August 18, 1920 (that's 95 years ago / ~1 generation ago). There are still women alive today (~2M US, probabilistically half of which are women) who in their lifetime were denied their right to vote at citizens! There's no stronger and truer indicator of a systemic problem than one's opinion legally suppressed and invalidated.
+
+For this reason, I am not surprised by Lea's (and similar) accounts (at Stanford, and otherwise). People are still under the generational affect of their elders, many who grew up valuing women differently.
+
+No, I am not surprised by this account. I am, however, disappointed, even ashamed. Not in the capacity of a guy, who should feel bad or personally accountable (although who isn't personally accountable at some level; if not directly, than for lack of empathy/sensitivity, tact, or for not doing too little to stop such discrimination), but rather as an academic witnessing the efforts of hard working, intelligent people undermined by those who would deter progress. For this reason, it is especially disappointing to see at an acclaimed academic facility.
+
+**** Progress
+A challenging thing about being human is, (multinomial; binary or similarly discrete-classed) logistic classification is too often employed where a continuous classifier would better serve us. There are times when logistic regression is the right tool -- when there is an absolute answer (e.g. is this shape a square or a triangle). However, in many real-world scenarios, we compress the dimentionality of spectrums (autism, skin color, gender, personality-types) into generalizations whose limits serve to address our political goals (a generalization we make at sometimes great cost).
+
+In some cases, it's a consequence of real world limitations. In fact, this is a great example of where algorithm complexity analysis (rigorously quantifying the properties of algorithms) can give us a foundation and better understanding of real-world optimization. In practice, should a student fall just short of an "autistic" classification, they may be entirely ineligible (e.g. IEP) to receive or benefit from special instruction. That is to say, the model is limited in that not everyone benefits to a degree proportionate to their needs. An analogous continuous, linear approach, would be a custom curriculum for every student which addresses their every individuality. As you can imagine, while this has tremendous benefits (and we are + will see technology increasingly achieve this) it is challenging to standardize and costly to implement. It's like making dinner for a family. The optimal case is to make everyone what they want, but preparing several different dishes with different ingredients takes a lot of time, money, and skill. As a result, an attempt is made to serve the majority by choosing a single menu (outcome). Restaurants are a model which serves to capitalize this inefficiency.
+
+Corollary to modelling something continuous via generalized logits, there will (by definition, otherwise it wouldn't be continuous) exists inefficiencies (mis-labellings) and gaps wherein thrive the Hacker. You see it with tax brackets; someone creatively structuring their finances to pay less tax. Or in gaming a job interview; preparing for the expected/common questions. Even the way some people dress or speak are attempts at triggering or activating some sigmoid (logistic) function to appear / be perceived as associated with a certain class or set of values.
+
+Society tends to classify Hackers, posers (I'll call them social engineers), and the likes, as evil, as they (presumably) opportunistically exploit our societal expectations/contracts/promises (mutual agreements/understandings) for personal gain.
+
+Some people just like to better understand our contracts, and what these inefficiencies are. Some people do indeed want to discover ways to draw value. One could argue, this inquisitive hacker spirit (irrespective of the outcome) is both the biggest thread and the most essential imperative to our advancement. As inefficiencies are discovered, we as people (more broadly, 'the government") devise new legislature, social contracts, and or popularize trends (read: movements) to either minimize or ubiquitize this exploitation for optimal benefit of society as a whole (e.g. drug enforcement, police).
+
+Of course, Hacker itself is a binary logistic, perhaps we can do a little better and make it ternary (admittedly still not perfect). The difference between white hat, grey hat, and black hat hackers, in my mind, is that the white hats discover inefficiencies between classes or how contracts can physically be subverted or ignored, but don't themselves act towards exploiting them. The grey hats live in the ambiguity or inefficiencies of social contracts (blurring the lines) and attempt to legally derive benefit. The black hats ignore social contracts altogether in pursuit of gains.
+
+While hackers are indispensable for discovering and solving inefficiencies, capitalism is one of the driving factors for sustaining such solutions at scale. It's no mystery why many hackers are entrepreneurs, and vis versa. The general public (99%) may feel discouraged by capitalism because in "ameliorating" (reallocating) the system as a whole, their disproportionate gains may be compromised/diminished. It's unfortunate that re-drawing the lines can results in negative side effects, there are likely interesting strategies to address this (e.g. exchanges + recompense, like eminent domain), and this should be addressed in essays by people much more qualified than I. On the other hand, slavery was one of those lines. Women voting was one of those lines. And some lines need to be redrawn and or removed altogether. Another case against capitalism is, many ventures are a net negative on the world, or help only people with money. Economics is a very difficult field and I prefer addressing problems I can rationalize against specific algorithms, so again I'll leave this legitimate concern to someone more qualified.
+
+Why are we talking about classifiers, hackers, and capitalism, and what does this have to do with sexism you ask? Well, sexism is a result of logistic classification. Society buckets individuals into specific gender categories which serve social or political purposes. Being identified as a boy or a girl has (and it shouldn't, unless health related, have) significance to policies like marriage, taxation, and (absurdly) voting. Additionally, the classification is a principal component of sexual interest. And while we hate to admit it, there are both hackers who exploit their classifications and people who suffer from the classifications existing.
+
+Continuing this essay is left as an exercise to the reader.
 ** Be Sustainable
 *** Smart Homes
 ** Be a Curate
 *** The Laws of Science
-
 *** The Branches of Mathematics
+**** Dependencies
+Topology -> group theory
+
 Towards a navigatable dependency graph for all topics of mathematics and everything.
+
+http://michaelkarpeles.com/math.html
+
+**** Prototype: The Compendium Mathematica
+I've created a prototype[0] of what I hope represents an important next step in connecting the disparate subfields of Mathematics and making them more accessible, for the benefit of math enthusiasts.
+http://michaelkarpeles.com/math.html
+
+Credits:
+I have tremendous amount of gratitude for Michael Bostock (who deserves all credit for the interface; zoomable treemaps, d3)[1], the American Mathematical Society's Mathematics Subject Classification taxonomy (AMS's MSC2010)[2], and most importantly Dave Rusin who curated the most impressive mathematical atlas I've ever seen, way back in 2000[3]
+
+Next Steps:
+1) Improve the taxonomy by having formula-level granularity
+2) Treemap search box to zoom to a specific topic's frame
+3) Add a list of vetted navigable resources for each topic
+4) Allow crowd sources-wikipedia style taxonomy / resource editing
+5) Settings files which allows users to keep track of what math they know and what resources they prefer (to visually achieve a holistic understanding of their knowledge gaps)
+
+Source:
+- my json taxonomy of the MSC2010 taxonomy is available here: http://michaelkarpeles.com/static/js/math.json
+- Run it, revise it yourself: https://github.com/mekarpeles/mathd
+
+The ultimate goal is to be able to programatically/dynamically generate an exhaustive curricula (concrete DAG of resources / shortest path through knowledge) for learning a specific mathematical principle / formula.
+
+[0] http://michaelkarpeles.com/math.html
+[1] http://bost.ocks.org/mike/treemap/
+[2] http://www.ams.org/msc/msc2010.html
+[3] http://www.math.niu.edu/~rusin/known-math/index/index.html
+
+**** Resources
+http://mathworld.wolfram.com/letters/
 http://www.math.niu.edu/~rusin/known-math/index/
+https://www.khanacademy.org/exercisedashboard
+http://jeffbaumes.github.io/standards/#
+https://dl.dropboxusercontent.com/u/11459286/ccssmgraph.pdf
+http://meta.math.stackexchange.com/questions/6479/a-graph-map-of-math-se
+http://forums.xkcd.com/download/file.php?id=29015&sid=8ae1604e5e548bed844ae0f1275bad43&mode=view
+http://www.aaamath.com/grade6.htm#topic1 - elementary
+https://github.com/stared/tag-graph-map-of-stackexchange
+http://www-old.newton.ac.uk/preprints/NI12010.pdf
 *** Epistemology: Types of Questions
 What formal research (mathematics) is being done towards enumerating
 all types of questions into axiomatic classes? Who researches
@@ -1468,6 +1679,59 @@ some liberties in summarizing them.
 [1] http://thesecondprinciple.com/t…/five-basic-types-questions/
 [2] http://www.umich.edu/~eleme…/probsolv/strategy/cthinking.htm
 [3] https://en.wikipedia.org/wiki/Question
+
+*** Curricula
+**** Preface
+What is the best system for discovering/sharing curricula on specific
+topics, similar to (and maybe the best answer is) university
+curricula + recommended books/resources?
+
+Quora, Reddit, Stackoverflow, and even Github "curation" repos have
+been pretty good sources for communities surfacing good
+resources/content, but I've yet to find a resource which proposes
+curricula in a a standard format.
+
+I'd love to know where you folks start when you want to learn / enter
+a new field (inb4 "Wikipedia"). I think University web pages, the
+aforementioned communities, Wikipedia, youtube, Khan Academy +
+Coursera are great starts, but it would be amazing to select a
+"subject" (e.g. linear algebra), see a list of checkboxes (read:
+requirements) which you already know (like discriminants,
+transpositions, tensors, eigen vectors) and then either generate or
+search manually curated curricula. Even if someone (the proverbial
+"someone" which usually ends up being me talking to myself, motivating
+myself to act, or convincing myself to avoid distraction) were to just
+crawl + curate academic curricula for a single field (computer
+science) across schools, present the data in a standard format, and
+allow diffs / frequency analysis of recommended books or common
+lectures, this would be an amazing start and value add to
+academia. I'm sure professors would contribute content to such a
+system, in place of their 80's style academic static html pages,
+assuming it saved them time and offers a better experience to them +
+their students.
+
+Anyway, if there's not already a great source, what would such a
+solution look look like -- a structured DAG / directed acyclic
+dependency graph of resources?
+
+I'm sure thought leaders, bloggers, etc, could earn significant
+affiliate sales by selling their curriculum (as a bundle, including
+the books / resources or additional content). I'm sure plenty of
+people would contribute their curricula, github + SO + gibbon.co
+style, as creative commons, etc.
+
+At first glance, here are some resources available: 
+- http://www.edutopia.org/blog/curriculum-sharing-sites-vanessa-vega
+- http://www.curriki.org/welcome/resources-curricula/
+- http://cnx.org/
+
+Implementation: I'd wish to see something more like... Wikipedia /
+wikibooks "create a collection" feature (except, perhaps as a chrome
+extension across the web).
+
+**** Mathematics
+1. [[https://archive.org/details/Calculus_643][Michael Spivak's Calculus]]
+2. [[][Mathematics: Its Content, Methods and Meaning]]
 
 ** Be Efficient
 *** Create the next Web Browser
@@ -1583,8 +1847,25 @@ an honest vote can empower injustice.
 Expert Political Judgment: How Good Is It? How Can We Know?
 [3] http://www.researchgate.net/…/235767787_Election_candidates…
 
-** Be Retrospective, Thoughtful
+** Be Retrospective, Thoughtful, Open-Minded, Respectful
+*** Theses
+Out of necessity (for survival), the world will approach/approximate greater accuracy. One challenge will be changing accordingly, and forfeiting luxuries which are unfairly bestowed upon us.
 *** Life Lessons
+**** Architecture and Modelling
+https://www.youtube.com/watch?v=CDokMxVtB3k&feature=youtu.be&t=36m41s and then skip to http://youtu.be/CDokMxVtB3k?t=38m33s
+
+I recently heard a Knuth talk (I can send you the question he was asked) where he addresses one of his biggest mistakes. He couldn't think of any, other than to say he had made many
+But he brought up a case of LaTeX. He, "based Tex on binary arithmetic inside (based on a scaled point) but decimal arithmetic outside, for the user"
+
+ Where the internal representation of font ratios was different than the external rendering because other libraries required certain things
+And by trying to come up with an analogy, side effects occurred which now still reside in TeX
+The key point, whether it perfectly follows from the example or not, is, if there's a way to model things as they are (like a fraction instead of a decimal), there's probably an advantage 
+Granted the real world is both not fully understood and has tons of stochastic components we can't practically model well. But when we can, it's something to consider. The wise words of Knuth.
+**** Math
+***** Lillian Rosanoff Lieber (via Daniel Fleisch) Tensors are the Facts of the Universe
+As the nature of tensors is such that they hold for all observers
+(each rank addresses all 3 directional basis vectors; i.e. all forces
+which can be applied on the R3 cartesian plane)
 **** Jen Shainess
 ***** Don't let individuals affect your life decision
 ***** Don't let people influence how you think about yourself
@@ -1594,13 +1875,11 @@ Expert Political Judgment: How Good Is It? How Can We Know?
 ***** Follow the traits of successful people
 ***** Find environments (niche) where your traits will be recognized
 
-**** Don't ask permission for everything
-**** People are wrong more often than we think
+**** Mek
+***** If you need to be noticed, make people notice you
+***** People are wrong more often than we think
 Don't let perception rule your actions
-**** The people around you change you
-**** People have families, and if you hurt them you hurt their families
-**** It doesn't matter who's right, only that the right answer outs
-**** Criticize by Questioning, not Advising
+***** Criticize by Questioning, not Advising
 The best way to criticism is not to criticise. Criticizing is a way to
 get straight to the point. It is done between friends. Before this
 trust exists, don't assume you know what they know (until you would
@@ -1610,6 +1889,10 @@ why others do things a certain way. Without asserting yourself, this
 will demonstrate what you know and you will benefit from hearing about
 the experiences driving their decisions.
 
+**** Compare yourself to who you were a year ago, not to others.
+**** Erik Parker: Don't ask permission for everything
+**** The people around you change you
+**** It doesn't matter who's right, only that the right answer outs
 **** Give it 5 minutes
 **** Organize your life as early as possible
 
@@ -1878,7 +2161,172 @@ Damping factors. Some of the important people I associate with are like damping 
 [1] http://homepages.ius.edu/.../html/notes/Chapter22/BFS.htm
 [2] https://en.wikipedia.org/wiki/PageRank#Damping_factor
 ** Be a Hacker
-** Be Meta, Reflective, Curious, Inquisitive
+*** Monty Hall and St. Petersburg
+A few moments ago, someone posted about the Monty Hall problem and
+Marilyn vos Savant.
+
+The Monty Hall problem is challenging for people to grasp for reasons
+demonstrated by the St. Petersburg Paradox[1]. The reason is, some
+people rely on their "gut" (their ability to interpret subtle nuances)
+more than they do mathematical logic, statistics, and
+probability. There is a difference between a decision made based on
+mathematical principle, and a decision which results from "economic"
+or utilitarian constraints. The difference is, the answer to the
+St. Petersburg problem depends on your finances and risk aversion,
+whereas the Monty Hall problem has a irrefutable, yet perhaps counter
+intuitive, best-case solution.
+
+The St. Petersburg Paradox proposes a game we'll call the "Consecutive
+Flipping Heads Game". The objective of the "Consecutive Flipping Heads
+Game" is to flip a fair penny as many consecutive times as you can
+until it lands on tails (wherein the game ends and you get to collect
+whatever money is in the pot). Now, originally, the pot contains 1
+penny (i.e. if your first coin flip lands tails, you still keep this 1
+penny from the pot and the game is over. If you flip heads first, and
+then a tails second, the pot doubles from 1 to 2 cents, the game ends,
+and you collect the 2 cents).
+
+The HEATED question is, what price would YOU pay to play this game? If
+the cost to play is 1 penny, everyone (except hipsters, maybe) would
+play because you are GUARANTEED to earn at very least your penny
+back. You will never lose money.
+
+But would you pay $1 dollar? Would you pay... $10?
+
+The "Paradox" in the St Petersburg Paradox is, mathematically, you
+should pay ANY amount of money to play this game, IRRESPECTIVE of the
+cost (so long as it doesn't cost "infinity" dollars). $1,000 to play?
+DO IT. $1,000,000 to play? WHAT ARE YOU WAITING FOR.
+
+Wait, this sounds crazy, why is math telling us to spend $1,000,000
+(which I might not even have) on a game where I could flip a tails and
+then instantly be broken. Math doesn't care about how much money you
+have, or your risk aversion. Math only cares about the expected
+average case of the game and how much money you could win in this
+average case. And for the "Consecutive Flipping Heads Game", this
+Expected Value (average-case payout) of playing the game (let's call
+the game X for short-hand) an infinite number of times
+is.... INFINITY $$ [2].
+
+You can think of Expected Value like someone's batting average in
+baseball. Throughout their career, baseball batters play the "Try To
+Hit The Baseball" game hundreds of times. The more they play, the
+closer they approach to a certain long-run average (their batting
+score), which changes slightly (becomes more accurate) with each
+additional at-bat.
+
+For those who care to understand the math, the formula for computing
+the Expected Value (let's call it E for short-hand) of playing the
+"Consecutive Heads Flipping Game" (let's call it capital X for
+short-hand) is show below. Otherwise skip to "GET ON WITH IT":
+
+Expected Value of [Consecutive Heads Flipping Game]:
+E[X] = SUM(xi * pi) ... which expands to:
+E[X] = (x1*p1) + (x2 * p2) + ... all the way up to ... + (xk * pk)
+Understanding the formula
+
+What does x# mean or p# mean? Think of "x#" (e.g. x1 or x2, etc) in
+this problem as the $ you earn if you achieve the ‪#‎th‬ consecutive
+heads flip. "p#" is the probability of achieving that # of consecutive
+heads flip. In this case, the probability of getting 1 consecutive
+heads is 1/2 (this is the probability of a coin landing heads) and the
+payout is 2 cents (the 1 cent initial pot specified by the game,
+doubles from the heads) ... the probability of 2 consecutive heads is
+p=1/4 (this comes from 1/2 for the first heads * 1/2 for the second
+heads) and the payout is x=2 cents. 3 consecutive heads is p=1/8, the
+payout is x=4 cents. You can see a pattern of the probability halving
+each time, and the payout doubling each time. If you're wondering what
+the xk and pk means... k is just a placeholder which represents the
+final/last iteration of the game. Since the game could last for 1 turn
+or 10,000 flips (we don't know!) we use the arbitrary symbol k to
+represent/denote the kth (final) flip of the sequence (whatever that
+number k may actually be).
+
+So in our case of X being the "Consecutive Heads Flipping Game", we have:
+E[X] = (1/2 chance * 2 cents) + (1/4 * 4 cents) + ... and on and on
+If we add (sum) all of these up, we get:
+E[X] = 1 + 1 + 1 + ....
+E[X] = infinity!
+
+GET ON WITH IT!!!! Ok, ok. If you work through the math, you'll see
+why the Expected Value (the average expected returns, if you were to
+play the game over and over again) would be infinity -- a great value
+proposition!
+
+That doesn't mean you will actually pay to play the game. In economics
+and utility theory, it can be demonstrated that money has a different
+value, relative to the amount of money you have. If you have $100 to
+your name, paying $50 to play this game may seem ludicrous and
+irresponsible. But if you have $100,000,000 dollars and the game costs
+$50, it may make a lot of sense for you (because of the Expected Value
+justifies and suggests, if you keep playing, you stand to earn a
+nearly infinite sum -- of course not guaranteed, just
+supported/informed by the average case probability of the event).
+
+This paradox is similar to the Monty Hall problem. The Monty Hall
+problem suggests you're on a game show with 3 doors. Behind one of
+them is something you want. Behind the other 2 are things you don't
+want (let's say worthless coal). You are entitled to choose 1 of the 3
+doors (thus with a 1/3 confidence). The game show host then reveals
+one of the 2 remaining un-selected doors which contains coal (one of
+the items you don't value). The question is, if the game show host
+were to allow you to change doors to the other remaining door,
+would/should you?
+
+Many argue it doesn't matter because you are now faced with a new,
+independent problem which has 2 doors, each of which have a 50/50
+probability of containing coal. However, the problem is, the
+probability distribution does NOT magically raise from 1/3 to 1/2 just
+because there are only 2 doors remaining. Here's why:
+
+Mathematically, there are 3 doors (buckets for your combinatorics
+folks) and 3 items which have 3! (3 factorial; i.e. 3 * 2 * 1) unique
+arrangements / ways of being ordered. And 3! (i.e. 3 * 2 * 1) = 6
+unique orderings. That is to say, when the game show host sets up the
+doors, he must choose 1 of those 6 arrangements.
+
+Door: 1, 2, 3
+a) Coal1 Coal2 Car
+b) Coal2 Coal1 Car
+c) Coal1 Car Coal2
+d) Coal2 Car Coal1
+e) Car Coal1 Coal2
+f) Car Coal2 Coal1
+Mind you, these are not actually 6 "unique" permutations. You may notice, that a&b, c&d, and e&f are... well, when you get right down to it, a piece of coal is a piece of coal and the two coal doors are the same crappy prize, as far as we're concerned. So really, out of these 6 orderings, only 3 of them are unique: a&c&e (we could have just as well said b&c&f or a&d&f, etc -- you should ask if you don't understand why this is. It's important, just not the emphasis of this piece). Needless to say, the real 3 unique outcomes are:
+Door: 1, 2, 3
+a) Coal Coal Car
+b) Coal Car Coal
+c) Car Coal Coal
+
+The door you originally select -- let's call this door #1, you choose
+with a (by definition) 1/3 probability of being right. When the game
+show host reveals one of the doors (such as door #3) as containing
+coal, we never learn if our door is wrong, only about one of the doors
+which was wrong. After the revealing, since there are only two doors
+left (ours and the other), and we know our door has a 1/3 chance of
+winning, then we know the remaining 2/3 probability lies with the
+other unrevealed door.  While it may appear to be a 50 / 50 choice,
+this ignores the initial probability distribution of the problem
+setup. Just because there are only 2 choices remaining, doesn't mean
+it the problem is a 50 / 50 spit. Here's how to explain it.  Here is
+the #1 key learning to understanding the Monty Hall Problem:
+
+- With our initial selection, we always choose the same door.
+
+- On the other hand, the same door is NOT always eliminated! If we
+  always choose door #1, then it can be either door #2 or door #3
+  which is eliminated, depending on which contains coal. There are 2
+  ways for the car to exist within door #2 or door #3 but only 1 way
+  for the car to exist in door #1.
+
+One could argue the host uses knowledge of the Monty Hall problem to purposely mislead contestants into choosing the wrong door (i.e. only offering the option to switch when their 1/3 probability original selection is correct). But assuming the placement of the valuable item is done perfectly randomly (fairly), I would switch doors. By switching doors to the final remaining door, you are basically making a new decision which includes both of the 2 doors: the probability of the new door, as well as the probability (the added information) which you get from the door which has been revealed (1/3). As a result, switching your decision to the other door means you have a 2/3 chance of being right. Given the opportunity, I'd switch.
+DISCLAIMER: I'm not perfect, corrections appreciated.
+[1] https://en.wikipedia.org/wiki/St._Petersburg_paradox
+[2] https://en.wikipedia.org/wiki/Expected_value
+[3] [[./code/monty.py][Monty Hall Program + Proof]]
+
+** Be Philosophical: Meta, Reflective, Curious, Inquisitive
+*** Analogies of Life and Computer Science (and their inferences)
 *** The Perception of Realities
 
 Reality is the conjectured state of things as they actually exist,
@@ -2338,3 +2786,8 @@ I need to support people who can create a better world.
 *** Jessy's JTag Controllers
 ** Be Observant, Logical, Reasonable, Analytical, Analogical
 *** How making life decisions can be informed Computer Science (algos)
+
+*** Life Lessons
+**** Knuth
+***** A vertex is worth as much as three edges
+: Pay people for finding mistakes
